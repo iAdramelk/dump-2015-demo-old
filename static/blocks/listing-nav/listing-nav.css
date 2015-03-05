@@ -1,0 +1,9 @@
+.listing-nav {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 265px;
+}
+
+.listing-nav .categories + .facets {
+  border-top: none;
+}
