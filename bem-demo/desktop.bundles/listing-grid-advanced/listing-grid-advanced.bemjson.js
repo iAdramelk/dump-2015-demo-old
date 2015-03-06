@@ -263,7 +263,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-01.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-01.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -288,7 +288,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-02.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-02.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -323,7 +323,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-03.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-03.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -348,7 +348,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-04.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-04.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -370,7 +370,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-06.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-06.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -392,7 +392,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-07.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-07.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -414,7 +414,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-08.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-08.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -439,7 +439,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-09.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-09.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -464,7 +464,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-10.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-10.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -489,7 +489,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-11.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-11.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
@@ -514,7 +514,7 @@
                                                 {
                                                     elem: 'image',
                                                     tag: 'img',
-                                                    attrs: { 'src': '../tmp/placeholder-12.jpg' }
+                                                    attrs: { 'src': '../../tmp/placeholder-12.jpg' }
                                                 },
                                                 {
                                                     elem: 'meta',
