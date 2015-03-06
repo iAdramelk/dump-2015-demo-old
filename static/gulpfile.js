@@ -27,6 +27,7 @@ gulp.task('styles', function() {
     .pipe(plugins.postcss(postcssGlob))
     .pipe(plugins.minifyCss())
     .pipe(plugins.remember('styles'))
+    .pipe(gulp.dest('build/'))
     .pipe(plugins.concat('style.css'))
     .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest('build/'))
