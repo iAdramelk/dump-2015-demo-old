@@ -1,5 +1,7 @@
 var React = require("react");
 
+var data = require("../data/listing.json");
+
 // Blocks
 
 var Page         = require("../blocks/page/page");
@@ -18,6 +20,7 @@ var Facets       = require("../blocks/facets/facets");
 var Facet        = require("../blocks/facet/facet");
 var Price        = require("../blocks/price/price");
 var CheckboxList = require("../blocks/checkbox-list/checkbox-list");
+var Footer       = require("../blocks/footer/footer");
 
 // Page
 
@@ -93,4 +96,4 @@ var PageList = React.createClass({
   }
 });
 
-module.exports = PageList();
+module.exports = PageList;

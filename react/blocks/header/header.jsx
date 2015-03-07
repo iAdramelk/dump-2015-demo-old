@@ -7,13 +7,13 @@ var Header = React.createClass({
         <div className="header__subtitle">интернет-магазин одежды</div>
         <div className="header__actions">
           <div className="header__action header__action_signin">
-            <a href="#" class="header__link">Войти</a>
+            <a href="#" className="header__link">Войти</a>
           </div>
           <div className="header__action header__action_signup">
-            <a href="#" class="header__link">Зарегистрироваться</a>
+            <a href="#" className="header__link">Зарегистрироваться</a>
           </div>
           <div className="header__action header__action_basket">
-            <a href="#" class="header__link">Корзина</a>
+            <a href="#" className="header__link">Корзина</a>
           </div>
         </div>
         <div className="header__title">Золушка</div>

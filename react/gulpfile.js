@@ -38,11 +38,12 @@ gulp.task('styles', function() {
 
 gulp.task('jsx', function() {
   return gulp.src(glob.jsx)
-  .pipe(plugins.render( {
-    data: require('./data/listing.json'),
-    template: './layouts/base.html'
-  } ))
-  .pipe(gulp.dest('build/'))
+  .pipe(plugins.render({
+    template: './layouts/base.html',
+    harmony: false,
+    staticMarkup: true
+  }))
+  .pipe(gulp.dest('build/'));
 
 });
 

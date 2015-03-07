@@ -1,4 +1,4 @@
-var React = require('react');
+var React = require("react");
 
 var Breadcrumbs = React.createClass({
   render: function() {
@@ -11,10 +11,14 @@ var Breadcrumbs = React.createClass({
 });
 
 Breadcrumbs.Item = React.createClass({
+  mod: function () {
+    return "breadcrumbs__link" + (this.props.current ? "is-current" : "");
+  },
+
   render: function() {
     return (
       <div className="breadcrumbs__item">
-        <a href="{this.props.href}" className="breadcrumbs__link {this.props.current ? 'is-current' : ''}">{this.props.text}</a>
+        <a href={this.props.href} className={this.mod()}>{this.props.text}</a>
       </div>
     );
   }
