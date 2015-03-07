@@ -1,30 +1,44 @@
 var React = require('react');
 
 var CheckboxList = React.createClass({
+
+  mod: function () {
+    return "checkbox-list" + (this.props.compact ? ' is-compact' : '');
+  },
+
+
   render: function() {
 
-    var items = this.props.items.map(function (item) {
+    var shown = this.props.limit ? this.props.limit : this.props.items.length;
+
+    console.log(shown)
+
+    var items = this.props.items.slice(0, shown).map(function (item) {
       return (
-        <CheckboxList.Item href="{item.href}" text="{item.text}" selected={item.selected} />
+        <CheckboxList.Item href={item.href} text={item.text} selected={item.selected} />
       );
     });
 
     return (
-      <div className="checkbox-list {this.props.compact ? 'is-compact' : ''}">
+      <div className={this.mod()}>
         <div className="checkbox-list__list">
           {items}
         </div>
-        {this.props.more < items.length ? <CheckboxList.More counter="{items.length - this.props.more}" /> : ''}
+        {this.props.limit < this.props.items.length ? <CheckboxList.More counter={this.props.items.length - this.props.limit} /> : ''}
       </div>
     );
   }
 });
 
 CheckboxList.Item = React.createClass({
+  mod: function () {
+    return "checkbox-list__link" + (this.props.selected ? ' is-selected' : '');
+  },
+
   render: function() {
     return (
       <div className="checkbox-list__item">
-        <a href="{this.props.href}" className="checkbox-list__link {this.props.selected ? 'is-selected' : ''}">{this.props.text}</a>
+        <a href={this.props.href} className={this.mod()}>{this.props.text}</a>
       </div>
     );
   }
@@ -33,7 +47,7 @@ CheckboxList.Item = React.createClass({
 CheckboxList.More = React.createClass({
   render: function() {
     return (
-      <div className="checkbox-list__more">Еще {this.props.counter}…</div>
+      <div className="checkbox-list__more">{"Еще " + this.props.counter + "…"}</div>
     );
   }
 });

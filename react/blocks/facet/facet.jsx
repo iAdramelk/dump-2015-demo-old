@@ -5,9 +5,14 @@ var Facet = React.createClass({
     return this.props.price.toLocaleString("ru-RU", {style: "currency", currency: "RUR", minimumFractionDigits: 0});
   },
 
+  mod: function () {
+    return "facet" + (this.props.closed ? ' is-closed' : '');
+  },
+
+
   render: function() {
     return (
-      <div className="facet {this.props.closed ? 'is-closed' : ''}">
+      <div className={this.mod()}>
         <div className="facet__title">{this.props.title}</div>
         <div className="facet__content">
           {this.props.children}

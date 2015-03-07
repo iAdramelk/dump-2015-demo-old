@@ -63,7 +63,7 @@ Listing.Content = React.createClass({
   render: function() {
     return (
       <div className="listing__content">
-        {this.props.childern}
+        {this.props.children}
       </div>
     );
   }
@@ -73,7 +73,7 @@ Listing.Items = React.createClass({
   render: function() {
     return (
       <div className="listing__items">
-        {this.props.childern}
+        {this.props.children}
       </div>
     );
   }
@@ -82,8 +82,8 @@ Listing.Items = React.createClass({
 Listing.Nav = React.createClass({
   render: function() {
     return (
-      <div className="listing__Nav">
-        {this.props.childern}
+      <div className="listing__nav">
+        {this.props.children}
       </div>
     );
   }

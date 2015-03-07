@@ -12,10 +12,13 @@ var Sorting = React.createClass({
 });
 
 Sorting.Item = React.createClass({
+  mod: function () {
+    return "sorting__link" + (this.props.current ? ' is-current' : '');
+  },
   render: function() {
     return (
       <div className="sorting__item">
-        <a href="{this.props.href}" className="sorting__link {this.props.current ? 'is-current' : ''}">{this.props.text}</a>
+        <a href={this.props.href} className={this.mod()}>{this.props.text}</a>
       </div>
     );
   }

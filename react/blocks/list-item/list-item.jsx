@@ -10,7 +10,7 @@ var ListItem = React.createClass({
       <div className="list-item">
         <a href={this.props.href}><img src={this.props.image} className="list-item__image" /></a>
         <div className="list-item__meta">
-          <div className="list-item__price">{this.formattedPrice()} руб.</div>
+          <div className="list-item__price">{this.formattedPrice()}</div>
           <div className="list-item__title"><a href={this.props.href}>{this.props.title}</a></div>
           <div className="list-item__description">
             {this.props.description}

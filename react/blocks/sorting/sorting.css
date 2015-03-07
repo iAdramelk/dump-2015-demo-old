@@ -5,8 +5,9 @@
   padding: 6px 0 4px;
 }
 
-.sorting__mode {
+.sorting__item {
   display: inline-block;
+  margin: 0 3px;
 }
 
 .sorting__link {
