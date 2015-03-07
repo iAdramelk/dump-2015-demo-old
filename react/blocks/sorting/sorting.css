@@ -1,0 +1,19 @@
+.sorting {}
+
+.sorting__title {
+  display: inline-block;
+  padding: 6px 0 4px;
+}
+
+.sorting__mode {
+  display: inline-block;
+}
+
+.sorting__link {
+  display: block;
+  padding: 6px 5px 4px;
+}
+
+.sorting__link.is-current {
+  background: $background;
+}
