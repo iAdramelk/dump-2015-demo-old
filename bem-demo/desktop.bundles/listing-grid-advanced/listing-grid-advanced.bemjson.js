@@ -23,9 +23,9 @@
                             elem: 'action',
                             elemMods: { 'signin': true },
                             content: {
-                                elem: 'link',
-                                tag: 'a',
-                                attrs: { 'href': '#' },
+                                block: 'link',
+                                mix: [{block: 'header', elem: 'link'}],
+                                url: '#',
                                 content: 'Войти'
                             }
                         },
@@ -33,9 +33,9 @@
                             elem: 'action',
                             elemMods: { 'signup': true },
                             content: {
-                                elem: 'link',
-                                tag: 'a',
-                                attrs: { 'href': '#' },
+                                block: 'link',
+                                mix: [{block: 'header', elem: 'link'}],
+                                url: '#',
                                 content: 'Зарегистрироваться'
                             }
                         },
@@ -43,9 +43,9 @@
                             elem: 'action',
                             elemMods: { 'basket': true },
                             content: {
-                                elem: 'link',
-                                tag: 'a',
-                                attrs: { 'href': '#' },
+                                block: 'link',
+                                mix: [{block: 'header', elem: 'link'}],
+                                url: '#',
                                 content: 'Корзина'
                             }
                         }
