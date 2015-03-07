@@ -11,7 +11,12 @@ var glob = {
   'blocks/*/**.css'
   ],
   jsx: [
-    'pages/**.jsx'
+    'templates/*.jsx',
+    'blocks/*/**.jsx',
+    'data/listing.json'
+  ],
+  templates: [
+    'templates/*.jsx'
   ],
   html: [
   'pages/*.html'
@@ -37,17 +42,17 @@ gulp.task('styles', function() {
 });
 
 gulp.task('jsx', function() {
-  return gulp.src(glob.jsx)
-  .pipe(plugins.render({
-    template: './layouts/base.html',
-    harmony: false,
-    staticMarkup: true
-  }))
-  .pipe(gulp.dest('build/'));
+  return gulp.src(glob.templates)
+    .pipe(plugins.render({
+      template: './layouts/base.html',
+      harmony: false,
+      staticMarkup: true
+    }))
+    .pipe(gulp.dest('pages/'));
 
 });
 
-gulp.task('browser-sync', ['styles'], function() {
+gulp.task('browser-sync', ['styles', 'jsx'], function() {
   browserSync({
     server: {
       baseDir: './'
@@ -67,6 +72,10 @@ gulp.task('watch', ['browser-sync'], function () {
     }
 
     gulp.start('styles');
+  });
+
+  plugins.watch(glob.jsx, function(){
+    gulp.start('jsx');
   });
 
 });
