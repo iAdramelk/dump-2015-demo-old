@@ -5,7 +5,7 @@ var Categories = React.createClass({
 
     var items = this.props.items.map(function (item) {
       return (
-        <Categories.Item href="{item.href}" text="{item.text}" level="{item.level}" current={item.current} />
+        <Categories.Item href={item.href} text={item.text} level={item.level} current={item.current} />
       );
     });
 
@@ -20,10 +20,13 @@ var Categories = React.createClass({
 });
 
 Categories.Item = React.createClass({
+  mod: function () {
+    return "categories__link" + (this.props.current ? ' is-current' : '');
+  },
   render: function() {
     return (
-      <div className="categories__item categories__item_level_{this.prop.level}">
-        <a href="{this.prop.href}" className="categories__link {this.prop.current ? 'is-current' : ''}">{this.prop.text}</a>
+      <div className={"categories__item categories__item_level_" + this.props.level}>
+        <a href={this.props.href} className={this.mod()}>{this.props.text}</a>
       </div>
     );
   }

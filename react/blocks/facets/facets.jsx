@@ -5,7 +5,7 @@ var Facets = React.createClass({
   render: function() {
     return (
       <div className="facets">
-        {this.props.childern}
+        {this.props.children}
       </div>
     );
   }

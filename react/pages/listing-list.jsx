@@ -52,7 +52,7 @@ var PageList = React.createClass({
               <Listing.ViewMode>
                 <ViewMode>
                   <ViewMode.Item {...data.viewMode[0]} />
-                  <ViewMode.Item {...data.viewMode[0].href} current={true} />
+                  <ViewMode.Item {...data.viewMode[1]} current={true} />
                 </ViewMode>
               </Listing.ViewMode>
             </Listing.Header>

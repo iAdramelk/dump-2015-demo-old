@@ -24,8 +24,8 @@
     { "href": "#", "text": "по новизне" }
   ],
   "viewMode": [
-    { "href": "#", "text": "плиткой", "current": true  },
-    { "href": "#", "text": "списком", "current": false }
+    { "href": "#", "text": "плиткой"  },
+    { "href": "#", "text": "списком" }
   ],
   "goods": [
     {
@@ -142,7 +142,8 @@
           { "href": "#", "text": "Акрил",   "selected": false },
           { "href": "#", "text": "Вискоза", "selected": true  },
           { "href": "#", "text": "Лайкра",  "selected": false },
-          { "href": "#", "text": "Лен",     "selected": true  }
+          { "href": "#", "text": "Лен",     "selected": true  },
+          { "href": "#", "text": "Клен",    "selected": false  }
         ],
         "limit": 4
       }
@@ -152,6 +153,7 @@
       "closed": false,
       "content": {
         "type": "checkbox-list-compact",
+        "compact": true,
         "items": [
           { "href": "#", "text": "38", "selected": false },
           { "href": "#", "text": "39", "selected": false },
