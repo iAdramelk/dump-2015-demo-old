@@ -14,18 +14,5 @@
     </div>
   </template>
 
-  <script>
-    Polymer('x-list-item', {
-      ready: function() {
-        this.formattedPrice = this.formatPrice();
-      },
-      formatPrice: function() {
-        return this.price.toLocaleString("ru-RU", {
-          style: "currency",
-          currency: "RUR",
-          minimumFractionDigits: 0
-        });
-      }
-    });
-  </script>
+  <script src="list-item.js"></script>
 </polymer-element>
