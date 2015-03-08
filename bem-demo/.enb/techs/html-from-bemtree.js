@@ -16,7 +16,8 @@
  * nodeConfig.addTech(require('enb/techs/html-from-bemjson'));
  * ```
  */
-var vm = require('vm'),
+var path = require('path'),
+    vm = require('vm'),
     vow = require('vow'),
     vfs = require('enb/lib/fs/async-fs'),
     asyncRequire = require('enb/lib/fs/async-require'),
@@ -28,6 +29,8 @@ module.exports = require('enb/lib/build-flow').create()
     .useSourceFilename('bemtreeTarget', '?.bemtree.js')
     .useSourceFilename('bemhtmlTarget', '?.bemhtml.js')
     .builder(function(bemtreeFilename, bemhtmlFilename) {
+        var bemBundle = path.basename(bemhtmlFilename, '.bemhtml.js');
+
         dropRequireCache(require, bemhtmlFilename);
 
         return vow.all([
@@ -37,8 +40,12 @@ module.exports = require('enb/lib/build-flow').create()
             .spread(function(bemtree, bemhtml) {
                 var ctx = vm.createContext({
                     Vow : vow,
+                    Vfs : vfs,
                     console : console,
-                    setTimeout : setTimeout
+                    setTimeout : setTimeout,
+                    bem: {
+                        bundle: bemBundle
+                    }
                 });
 
                 vm.runInContext(bemtree, ctx);

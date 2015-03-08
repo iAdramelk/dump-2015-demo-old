@@ -1,0 +1,14 @@
+block('breadcrumbs').content()(function() {
+    var breadcrumbs = this.ctx.breadcrumbs;
+
+    return breadcrumbs.map(function (n) {
+        return {
+            elem: 'item',
+            content: {
+                elem: 'link',
+                url: n.href,
+                content: n.text
+            }
+        };
+    });
+});

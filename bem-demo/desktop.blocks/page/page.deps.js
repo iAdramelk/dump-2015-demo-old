@@ -1,5 +1,7 @@
 ({
     mustDeps : [
         { block: 'normalize' }
+    ],
+    shouldDeps: [
     ]
 })
