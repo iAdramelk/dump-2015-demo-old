@@ -19,7 +19,7 @@
   left: 0;
   right: 0;
   padding: 10px;
-  background: rgba(255,255,255,x-5);
+  background: rgba(255,255,255,.5);
 }
 
 .title {

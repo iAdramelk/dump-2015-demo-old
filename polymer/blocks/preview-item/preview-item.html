@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="x-preview-item" attributes="href image xtitle price" noscript>
+<polymer-element name="x-preview-item" attributes="href image xtitle price">
   <template>
     <link rel="stylesheet" href="preview-item.css">
       <a href={{href}} class="link">
@@ -11,16 +11,5 @@
         </div>
       </a>
   </template>
-  <script>
-    Polymer('x-preview-item', {
-      formatedPrice: function() {
-        return this.price.toLocaleString("ru-RU", {
-          style: "currency",
-          currency: "RUR",
-          minimumFractionDigits: 0
-        });
-      }
-    });
-  </script>
-
+  <script src="preview-item.js"></script>
 </polymer-element>
