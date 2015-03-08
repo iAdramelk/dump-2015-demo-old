@@ -2,19 +2,19 @@
   display: block;
 }
 
-:host([level="2"]) {
-  paddig-left: 20px;
-}
-
-:host([level="3"]) {
-  paddig-left: 40px;
-}
-
 .link {
   display: inline-block;
   padding: 6px 5px 4px;
 }
 
-:host([current="true"]) .link {
+.link_level_2 {
+  margin-left: 20px;
+}
+
+.link_level_3 {
+  margin-left: 40px;
+}
+
+:host([current]) .link {
   background: #ddd;
 }

@@ -3,13 +3,16 @@
 <polymer-element name="x-categories" attributes="items">
   <template>
     <link rel="stylesheet" href="categories.css">
-
     <div class="title">Категории</div>
     <template repeat="{{ item in items }}">
-      <x-categories-item href="{{item.href}}" text="{{item.text}}" current="{{item.current}}" level="{{item.level}}" />
+      <template if="{{item.current}}">
+        <x-categories-item href="{{item.href}}" text="{{item.text}}" level="{{item.level}}" current />
+      </template>
+      <template if="{{!item.current}}">
+        <x-categories-item href="{{item.href}}" text="{{item.text}}" level="{{item.level}}" />
+      </template>
     </template>
   </template>
-
   <script src="categories.js"></script>
 </polymer-element>
 
@@ -17,6 +20,6 @@
   <template>
       <link rel="stylesheet" href="categories-item.css">
 
-      <a href="{{href}}" class="link">{{text}}</a>
+      <a href="{{href}}" class="link link_level_{{level}}">{{text}}</a>
   </template>
 </polymer-element>

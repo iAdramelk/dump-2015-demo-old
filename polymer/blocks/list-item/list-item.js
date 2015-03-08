@@ -1,4 +1,4 @@
-Polymer('x-list-item', {
+Polymer({
   ready: function() {
     this.formattedPrice = this.formatPrice();
   },

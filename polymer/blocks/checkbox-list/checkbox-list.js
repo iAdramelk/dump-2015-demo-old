@@ -1,4 +1,4 @@
-Polymer('x-checkbox-list', {
+Polymer({
   ready: function () {
     var items = JSON.parse(this.items);
     var shown = this.limit ? this.limit : items.length;
