@@ -1,0 +1,20 @@
+:host {
+  display: block;
+}
+
+:host([level="2"]) {
+  paddig-left: 20px;
+}
+
+:host([level="3"]) {
+  paddig-left: 40px;
+}
+
+.link {
+  display: inline-block;
+  padding: 6px 5px 4px;
+}
+
+:host([current="true"]) .link {
+  background: #ddd;
+}

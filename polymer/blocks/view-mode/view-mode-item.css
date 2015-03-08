@@ -1,0 +1,12 @@
+:host {
+  display: inline-block;
+}
+
+.link {
+  display: block;
+  padding: 6px 5px 4px;
+}
+
+:host([current]) .link {
+  background: #ddd;
+}

@@ -1,0 +1,31 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="x-list-item" attributes="href image xtitle price">
+  <template>
+    <link rel="stylesheet" href="list-item.css">
+
+    <a href={{href}}><img src={{image}} class="image" /></a>
+    <div class="meta">
+      <div class="price" id="price">{{formattedPrice}}</div>
+      <div class="title"><a href={{href}}>{{xtitle}}</a></div>
+      <div class="description">
+        <content></content>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer('x-list-item', {
+      ready: function() {
+        this.formattedPrice = this.formatPrice();
+      },
+      formatPrice: function() {
+        return this.price.toLocaleString("ru-RU", {
+          style: "currency",
+          currency: "RUR",
+          minimumFractionDigits: 0
+        });
+      }
+    });
+  </script>
+</polymer-element>
