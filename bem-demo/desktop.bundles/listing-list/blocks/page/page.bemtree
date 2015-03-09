@@ -27,7 +27,7 @@ block('page').mod('bundle', 'listing-list')(
                             content: [
                                 {
                                     elem: 'breadcrumbs',
-                                    content: { block: 'breadcrumbs', breadcrumbs: breadcrumbs }
+                                    content: { block: 'breadcrumbs', options: breadcrumbs }
                                 },
                                 {
                                     elem: 'title',
@@ -36,11 +36,11 @@ block('page').mod('bundle', 'listing-list')(
                                 },
                                 {
                                     elem: 'sorting',
-                                    content: { block: 'sorting', menu: sorting }
+                                    content: { block: 'sorting', options: sorting }
                                 },
                                 {
                                     elem: 'view-mode',
-                                    content: { block: 'view-mode', menu: viewMode }
+                                    content: { block: 'view-mode', options: viewMode }
                                 }
                             ]
                         },

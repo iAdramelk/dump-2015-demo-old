@@ -1,7 +1,7 @@
 block('breadcrumbs').content()(function() {
-    var breadcrumbs = this.ctx.breadcrumbs;
+    var options = this.ctx.options;
 
-    return breadcrumbs.map(function (n) {
+    return options.map(function (n) {
         return {
             elem: 'item',
             content: {

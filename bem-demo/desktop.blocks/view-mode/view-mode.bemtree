@@ -1,8 +1,8 @@
 block('view-mode').content()(function() {
-    var menu = this.ctx.menu;
+    var options = this.ctx.options;
 
     return [
-        menu.map(function(data) {
+        options.map(function(data) {
             return {
                 elem: 'mode',
                 content: {
