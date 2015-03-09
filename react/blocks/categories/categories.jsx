@@ -5,7 +5,7 @@ var Categories = React.createClass({
 
     var items = this.props.items.map(function (item) {
       return (
-        <Categories.Item href={item.href} text={item.text} level={item.level} current={item.current} />
+        <Categories.Item href={item.href} text={item.text} level={item.level} current={item.current} key={item.text} />
       );
     });
 

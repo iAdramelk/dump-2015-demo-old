@@ -1,0 +1,4 @@
+polyfill-next-selector { content: ':host > x-categories + x-facets' }
+::content x-categories + x-facets {
+  border-top: none;
+}

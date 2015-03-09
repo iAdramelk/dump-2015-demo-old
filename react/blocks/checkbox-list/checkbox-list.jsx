@@ -6,16 +6,13 @@ var CheckboxList = React.createClass({
     return "checkbox-list" + (this.props.compact ? ' is-compact' : '');
   },
 
-
   render: function() {
 
     var shown = this.props.limit ? this.props.limit : this.props.items.length;
 
-    console.log(shown)
-
     var items = this.props.items.slice(0, shown).map(function (item) {
       return (
-        <CheckboxList.Item href={item.href} text={item.text} selected={item.selected} />
+        <CheckboxList.Item href={item.href} text={item.text} selected={item.selected} key={item.text} />
       );
     });
 
