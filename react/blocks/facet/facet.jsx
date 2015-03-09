@@ -1,9 +1,6 @@
 var React = require('react');
 
 var Facet = React.createClass({
-  formattedPrice: function() {
-    return this.props.price.toLocaleString("ru-RU", {style: "currency", currency: "RUR", minimumFractionDigits: 0});
-  },
 
   mod: function () {
     return "facet" + (this.props.closed ? ' is-closed' : '');
