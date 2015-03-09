@@ -1,6 +1,6 @@
 var React = require("react");
 
-var data = require("../data/listing.json");
+var data = require("../../data/listing.json");
 
 // Blocks
 
