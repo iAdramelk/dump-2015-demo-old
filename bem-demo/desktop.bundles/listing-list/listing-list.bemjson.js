@@ -2,8 +2,8 @@
     { block: 'global' },
     {
         block: 'page',
-        'title': 'Пирожки',
-        'styles': [
+        title: 'Пирожки',
+        styles: [
             {
                 elem: 'css',
                 'url': 'listing-list.css',

@@ -9,7 +9,10 @@ block('page').mod('bundle', 'listing-list')(
             breadcrumbs = data.breadcrumbs,
             title = data.title,
             sorting = data.sorting,
-            viewMode = data.viewMode;
+            viewMode = data.viewMode,
+            goods = data.goods,
+            categories = data.categories,
+            facets = data.facets;
 
         return [
             { block: 'header' },
@@ -44,12 +47,15 @@ block('page').mod('bundle', 'listing-list')(
                         {
                             elem: 'content',
                             content: [
+                                { block: 'listing-items', goods: goods },
+                                { block: 'listing-nav', categories: categories, facets: facets }
                             ]
                         }
                     ]
                 }
              },
             { block: 'menu', menu: menu },
+            { block: 'footer' }
         ]
     })
-)
+);
