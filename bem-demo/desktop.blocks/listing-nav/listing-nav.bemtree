@@ -1,0 +1,114 @@
+block('listing-nav').content()(function(){
+    var categories = this.ctx.categories,
+        materialFacet = this.ctx.facets[1],
+        sizeFacet = this.ctx.facets[2];
+
+    return [
+        {
+            block: 'categories',
+            content: [
+                { elem: 'title', content: 'Категории' },
+                categories.map(function(n){
+                    return {
+                        elem: 'item',
+                        elemMods: { 'level': n.level },
+                        content: {
+                            elem: 'link',
+                            tag: 'a',
+                            attrs: {'href': n.href},
+                            content: n.text,
+                            current: n.current
+                        }
+                    };
+                })
+            ]
+        },
+        {
+            block: 'facets',
+            content: [
+                {
+                    block: 'facet',
+                    content: [
+                        { elem: 'title', content: 'Цена, руб.' },
+                        {
+                            elem: 'content',
+                            content: {
+                                block: 'price',
+                                content: [
+                                    {
+                                        elem: 'group',
+                                        elemMods: { 'from': true },
+                                        content: [
+                                            {
+                                                elem: 'title',
+                                                tag: 'label',
+                                                content: 'От:'
+                                            },
+                                            {
+                                                elem: 'field',
+                                                tag: 'input',
+                                                attrs: { 'type': 'text', 'placeholder': '900' }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elem: 'group',
+                                        elemMods: { 'to': true },
+                                        content: [
+                                            {
+                                                elem: 'title',
+                                                tag: 'label',
+                                                content: 'До:'
+                                            },
+                                            {
+                                                elem: 'field',
+                                                tag: 'input',
+                                                attrs: {
+                                                    'type': 'text',
+                                                    'placeholder': '20 000'
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        { elem: 'more', content: 'Показать' }
+                    ]
+                },
+                {
+                    block: 'facet',
+                    content: [
+                        {
+                            elem: 'title',
+                            content: materialFacet.title
+                        },
+                        {
+                            elem: 'content',
+                            content: {
+                                block: 'checkbox-list',
+                                items: materialFacet.content.items.slice(0, materialFacet.content.limit)
+                            }
+                        },
+                        { elem: 'more', content: 'Еще 11…' }
+                    ]
+                },
+                {
+                    block: 'facet',
+                    content: [
+                        { elem: 'title', content: sizeFacet.title },
+                        {
+                            elem: 'content',
+                            content: {
+                                block: 'checkbox-list',
+                                mix: [ { block: 'is-compact' } ],
+                                items: sizeFacet.content.items
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ];
+
+});

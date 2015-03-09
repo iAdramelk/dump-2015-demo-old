@@ -1,0 +1,22 @@
+block('sorting').content()(function() {
+    var options = this.ctx.options;
+
+    return [
+        {
+            elem: 'title',
+            content: 'Сортировать:'
+        },
+        options.map(function(data) {
+            return {
+                elem: 'mode',
+                content: {
+                    elem: 'link',
+                    mix: data.current ? [ { block: 'is-current' } ] : [],
+                    current: data.current,
+                    url: data.href,
+                    content: data.text
+                }
+            };
+        })
+    ];
+});

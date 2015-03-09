@@ -1,0 +1,61 @@
+block('page').mod('bundle', 'listing-list')(
+    def()(function() {
+        this.ctx.title = 'Пирожки';
+        return applyNext();
+    }),
+    content()(function() {
+        var data = this.data,
+            menu = data.menu,
+            breadcrumbs = data.breadcrumbs,
+            title = data.title,
+            sorting = data.sorting,
+            viewMode = data.viewMode,
+            goods = data.goods,
+            categories = data.categories,
+            facets = data.facets;
+
+        return [
+            { block: 'header' },
+            { block: 'menu', menu: menu },
+            {
+                block: 'content',
+                content: {
+                    block: 'listing',
+                    content: [
+                        {
+                            elem: 'header',
+                            content: [
+                                {
+                                    elem: 'breadcrumbs',
+                                    content: { block: 'breadcrumbs', options: breadcrumbs }
+                                },
+                                {
+                                    elem: 'title',
+                                    tag: 'h1',
+                                    content: title
+                                },
+                                {
+                                    elem: 'sorting',
+                                    content: { block: 'sorting', options: sorting }
+                                },
+                                {
+                                    elem: 'view-mode',
+                                    content: { block: 'view-mode', options: viewMode }
+                                }
+                            ]
+                        },
+                        {
+                            elem: 'content',
+                            content: [
+                                { block: 'listing-items', goods: goods },
+                                { block: 'listing-nav', categories: categories, facets: facets }
+                            ]
+                        }
+                    ]
+                }
+             },
+            { block: 'menu', menu: menu },
+            { block: 'footer' }
+        ]
+    })
+);

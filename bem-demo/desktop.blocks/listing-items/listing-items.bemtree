@@ -1,0 +1,52 @@
+block('listing-items').content()(function(){
+    var goods = this.ctx.goods,
+        goodsBem,
+        bannerBem;
+
+    goodsBem = goods.map(function(n){
+        return {
+            block: 'list-item',
+            content: [
+                {
+                    tag: 'a',
+                    attrs: { href: n.href },
+                    content: {
+                        elem: 'image',
+                        tag: 'img',
+                        attrs: { src: '../' + n.image }
+                    }
+                },
+                {
+                    elem: 'meta',
+                    content: [
+                        { elem: 'price', content: n.price + ' руб.' },
+                        {
+                            elem: 'title',
+                            content: {
+                                tag: 'a',
+                                attrs: { 'href': n.href },
+                                content: n.title
+                            }
+                        },
+                        {
+                            elem: 'description',
+                            content: n.description
+                        }
+                    ]
+                }
+            ]
+        };
+    });
+
+    bannerBem = {
+        block: 'banner',
+        content: {
+            elem: 'link',
+            url: '#',
+            content: 'Лучшие мыши на рынке! Оптом дешевле!'
+        }
+    };
+
+    goodsBem.splice(2, 0, bannerBem);
+    return goodsBem;
+});
