@@ -18,53 +18,27 @@
             <x-breadcrumbs-item href='#' text='Платья'></x-breadcrumbs-item>
             <x-breadcrumbs-item href='#' text='Платья бальные'></x-breadcrumbs-item>
           </x-breadcrumbs>
-          <x-sorting>
-            <x-sorting-item href='#' text='по популярности' current></x-sorting-item>
-            <x-sorting-item href='#' text='по цене'></x-sorting-item>
-            <x-sorting-item href='#' text='по новизне'></x-sorting-item>
-          </x-sorting>
-          <x-view-mode>
-            <x-view-mode-item href='#' text='плиткой' current></x-view-mode-item>
-            <x-view-mode-item href='#' text='списком'></x-view-mode-item>
-          </x-view-mode>
-          <x-listing-items advanced>
+          <x-aticle-lead text='' href='#'></x-aticle-lead>
+          <x-listing-main advanced>
             <x-preview-item image='../tmp/placeholder-01.jpg' href='#' xtitle='Платье Mary Mea' price='2700'></x-preview-item>
             <x-preview-item image='../tmp/placeholder-02.jpg' href='#' xtitle='Платье Goddess London' price='4700'></x-preview-item>
             <x-banner href='#' text='Лучшие мыши на рынке! Оптом дешевле!' grid></x-banner>
             <x-preview-item image='../tmp/placeholder-03.jpg' href='#' xtitle='Платье People' price='1999'></x-preview-item>
-            <x-preview-item image='../tmp/placeholder-04.jpg' href='#' xtitle='Платье BSB' price='2000'>
-            </x-preview-item>
+            <x-banner href='#' text='Лучшие тараканы!' grid></x-banner>
+            <x-preview-item image='../tmp/placeholder-04.jpg' href='#' xtitle='Платье BSB' price='2000'></x-preview-item>
             <x-preview-item image='../tmp/placeholder-05.jpg' href='#' xtitle='Платье Key' price='2750'></x-preview-item>
             <x-preview-item image='../tmp/placeholder-06.jpg' href='#' xtitle='Платье V&V' price='1700'></x-preview-item>
             <x-preview-item image='../tmp/placeholder-07.jpg' href='#' xtitle='Платье Prio' price='5520'></x-preview-item>
             <x-preview-item image='../tmp/placeholder-08.jpg' href='#' xtitle='Платье Fever' price='2320'></x-preview-item>
             <x-preview-item image='../tmp/placeholder-09.jpg' href='#' xtitle='Платье Verezo' price='8700'></x-preview-item>
+            <x-banner href='#' text='А туфли у нас вообще отпад!' grid></x-banner>
             <x-preview-item image='../tmp/placeholder-10.jpg' href='#' xtitle='Платье Tops&Tops' price='2190'></x-preview-item>
             <x-preview-item image='../tmp/placeholder-11.jpg' href='#' xtitle='Платье Richardi' price='3000'></x-preview-item>
-          </x-listing-items>
+            <x-preview-item image='../tmp/placeholder-12.jpg' href='#' xtitle='Платье T&M' price='701'></x-preview-item>
+          </x-listing-main>
           <x-listing-nav>
             <x-categories items='[{"level":"1","href":"#","text":"Платья","current":false},{"level":"2","href":"#","text":"Платья бальные","current":false},{"level":"3","href":"#","text":"Коктельные платья","current":true},{"level":"3","href":"#","text":"Клубные платья","current":false},{"level":"3","href":"#","text":"Вечерние платья","current":false},{"level":"3","href":"#","text":"Выпускные платья","current":false}]'></x-categories>
-            <x-facets>
-              <x-facet xtitle='Цена, руб.' closed='false'>
-                <x-price min='900' max='20000' from='' to=''></x-price>
-              </x-facet>
-              <x-facet xtitle='Основной материал' closed='false'>
-                <x-checkbox-list
-                  items='[{"href":"#","text":"Акрил","selected":false},{"href":"#","text":"Вискоза","selected":true},{"href":"#","text":"Лайкра","selected":false},{"href":"#","text":"Лен","selected":true},{"href":"#","text":"Клен","selected":false}]'
-                  limit='4'
-                  
-                ></x-checkbox-list>
-              </x-facet>
-              <x-facet xtitle='Размер' closed='false'>
-                <x-checkbox-list
-                  items='[{"href":"#","text":"38","selected":false},{"href":"#","text":"39","selected":false},{"href":"#","text":"40","selected":false},{"href":"#","text":"41","selected":false},{"href":"#","text":"42","selected":false},{"href":"#","text":"43","selected":false},{"href":"#","text":"44","selected":false},{"href":"#","text":"45","selected":false}]'
-                  limit=''
-                  
-                    compact
-                  
-                ></x-checkbox-list>
-              </x-facet>
-            </x-facets>
+            <x-help items='[{"href":"#","text":"Доставка"},{"href":"#","text":"Оплата"},{"href":"#","text":"Бесплатная примерка"},{"href":"#","text":"Возврат"}]' xtitle='Полезные ссылки'></x-help>
           </x-listing-nav>
         </x-listing>
       </x-content>

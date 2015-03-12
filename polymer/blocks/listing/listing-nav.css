@@ -1,4 +1,11 @@
-polyfill-next-selector { content: ':host > x-categories + x-facets' }
-::content x-categories + x-facets {
+:host ::content x-categories + x-facets {
   border-top: none;
+}
+
+:host ::content x-categories + x-help {
+  margin-top: 20px;
+}
+
+:host ::content x-preview-item + x-preview-item {
+  margin-top: 20px;
 }

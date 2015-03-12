@@ -71,3 +71,9 @@ react/build
 riot/bower_components
 riot/node_modules
 riot/build
+
+# Polymer demo
+
+polymer/bower_components
+polymer/node_modules
+polymer/build

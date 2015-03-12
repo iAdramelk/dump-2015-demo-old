@@ -9,7 +9,7 @@
       </div>
       <h1 class="title">{{xtitle}}</h1>
       <div class="sorting">
-        <content select="x-sorting"></content>
+        <content select="x-sorting, x-article-lead"></content>
       </div>
       <div class="view-mode">
         <content select="x-view-mode"></content>
@@ -17,7 +17,7 @@
     </div>
     <div class="content">
       <div class="items">
-        <content select="x-listing-items"></content>
+        <content select="x-listing-main"></content>
       </div>
       <div class="nav">
         <content select="x-listing-nav"></content>
@@ -26,9 +26,9 @@
   </template>
 </polymer-element>
 
-<polymer-element name="x-listing-items" noscript>
+<polymer-element name="x-listing-main" noscript>
   <template>
-    <link rel="stylesheet" href="listing-items.css">
+    <link rel="stylesheet" href="listing-main.css">
     <content></content>
   </template>
 </polymer-element>
