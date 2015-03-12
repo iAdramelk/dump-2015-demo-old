@@ -27,14 +27,13 @@
             <x-view-mode-item href='<%= data.viewMode[0].href %>' text='<%= data.viewMode[0].text %>'></x-view-mode-item>
             <x-view-mode-item href='<%= data.viewMode[1].href %>' text='<%= data.viewMode[1].text %>' current></x-view-mode-item>
           </x-view-mode>
-          <x-listing-items>
+          <x-listing-main>
             <x-list-item image='<%= data.goods[0].image %>' href='<%= data.goods[0].href %>' xtitle='<%= data.goods[0].title %>' price='<%= data.goods[0].price %>'>
               <%= data.goods[0].description %>
             </x-list-item>
             <x-list-item image='<%= data.goods[1].image %>' href='<%= data.goods[1].href %>' xtitle='<%= data.goods[1].title %>' price='<%= data.goods[1].price %>'>
               <%= data.goods[1].description %>
             </x-list-item>
-            <x-banner href='#' text='Лучшие мыши на рынке! Оптом дешевле!'></x-banner>
             <x-list-item image='<%= data.goods[2].image %>' href='<%= data.goods[2].href %>' xtitle='<%= data.goods[2].title %>' price='<%= data.goods[2].price %>'>
               <%= data.goods[2].description %>
             </x-list-item>
@@ -47,6 +46,7 @@
             <x-list-item image='<%= data.goods[5].image %>' href='<%= data.goods[5].href %>' xtitle='<%= data.goods[5].title %>' price='<%= data.goods[5].price %>'>
               <%= data.goods[5].description %>
             </x-list-item>
+            <x-banner href='<%= data.banners[0].href %>' text='<%= data.banners[0].text %>'></x-banner>
             <x-list-item image='<%= data.goods[6].image %>' href='<%= data.goods[6].href %>' xtitle='<%= data.goods[6].title %>' price='<%= data.goods[6].price %>'>
               <%= data.goods[6].description %>
             </x-list-item>
@@ -65,7 +65,8 @@
             <x-list-item image='<%= data.goods[11].image %>' href='<%= data.goods[11].href %>' xtitle='<%= data.goods[11].title %>' price='<%= data.goods[11].price %>'>
               <%= data.goods[11].description %>
             </x-list-item>
-          </x-listing-items>
+            <x-banner href='<%= data.banners[1].href %>' text='<%= data.banners[1].text %>'></x-banner>
+          </x-listing-main>
           <x-listing-nav>
             <x-categories items='<%= JSON.stringify(data.categories) %>'></x-categories>
             <x-facets>
