@@ -64,3 +64,4 @@ npm-debug.log
 react/bower_components
 react/node_modules
 react/pages
+react/build
