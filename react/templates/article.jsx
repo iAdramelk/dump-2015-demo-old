@@ -11,7 +11,7 @@ var Menu         = require("../blocks/menu/menu");
 var Content      = require("../blocks/content/content");
 var Listing      = require("../blocks/listing/listing");
 var Breadcrumbs  = require("../blocks/breadcrumbs/breadcrumbs");
-var ArticleLead  = require("../blocks/article-lead/article-lead");
+var Article      = require("../blocks/article/article");
 var ViewMode     = require("../blocks/view-mode/view-mode");
 var PreviewItem  = require("../blocks/preview-item/preview-item");
 var Banner       = require("../blocks/banner/banner");
@@ -41,32 +41,14 @@ var PageList = React.createClass({
                 </Breadcrumbs>
               </Listing.Breadcrumbs>
               <Listing.Title title={data.title} />
-              <Listing.Sorting>
-                <ArticleLead text={data.article.lead} href={data.article.href} />
-              </Listing.Sorting>
-
             </Listing.Header>
             <Listing.Content>
-              <Listing.Main advanced={true}>
-                <PreviewItem {...data.goods[0]} />
-                <PreviewItem {...data.goods[1]} />
-                <Banner {...data.banners[0]} grid={true} />
-                <PreviewItem {...data.goods[2]} />
-                <Banner {...data.banners[1]} grid={true} />
-                <PreviewItem {...data.goods[3]} />
-                <PreviewItem {...data.goods[4]} />
-                <PreviewItem {...data.goods[5]} />
-                <PreviewItem {...data.goods[6]} />
-                <PreviewItem {...data.goods[7]} />
-                <Banner {...data.banners[2]} grid={true} />
-                <PreviewItem {...data.goods[8]} />
-                <PreviewItem {...data.goods[9]} />
-                <PreviewItem {...data.goods[10]} />
-                <PreviewItem {...data.goods[11]} />
+              <Listing.Main>
+                <Article {...data.article} />
               </Listing.Main>
               <Listing.Nav>
-                <Categories items={data.categories} />
-                <Help {...data.help} />
+                <PreviewItem {...data.goods[0]} />
+                <PreviewItem {...data.goods[1]} />
               </Listing.Nav>
             </Listing.Content>
           </Listing>

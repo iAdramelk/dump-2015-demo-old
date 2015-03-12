@@ -69,10 +69,10 @@ Listing.Content = React.createClass({
   }
 });
 
-Listing.Items = React.createClass({
+Listing.Main = React.createClass({
   render: function() {
     return (
-      <div className={"listing__items" + (this.props.advanced ? " listing__items_advanced" : "")}>
+      <div className={"listing__main" + (this.props.advanced ? " listing__main_advanced-items" : "")}>
         {this.props.children}
       </div>
     );

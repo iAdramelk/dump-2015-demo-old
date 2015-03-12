@@ -7,13 +7,13 @@ var browserSync = require('browser-sync');
 
 var glob = {
   styles: [
-  'node_modules/normalize.css/normalize.css',
+  'bower_components/normalize.css/normalize.css',
   'blocks/*/**.css'
   ],
   jsx: [
     'templates/*.jsx',
     'blocks/*/**.jsx',
-    'data/listing.json'
+    '../data/listing.json'
   ],
   templates: [
     'templates/*.jsx'
@@ -43,6 +43,7 @@ gulp.task('styles', function() {
 
 gulp.task('jsx', function() {
   return gulp.src(glob.templates)
+    .pipe(plugins.plumber())
     .pipe(plugins.render({
       template: './layouts/base.html',
       harmony: false,

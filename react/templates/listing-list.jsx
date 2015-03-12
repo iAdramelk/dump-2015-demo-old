@@ -57,21 +57,22 @@ var PageList = React.createClass({
               </Listing.ViewMode>
             </Listing.Header>
             <Listing.Content>
-              <Listing.Items>
+              <Listing.Main>
                 <ListItem {...data.goods[0]} />
                 <ListItem {...data.goods[1]} />
-                <Banner href="#" text="Лучшие мыши на рынке! Оптом дешевле!" />
                 <ListItem {...data.goods[2]} />
                 <ListItem {...data.goods[3]} />
                 <ListItem {...data.goods[4]} />
                 <ListItem {...data.goods[5]} />
+                <Banner {...data.banners[0]} />
                 <ListItem {...data.goods[6]} />
                 <ListItem {...data.goods[7]} />
                 <ListItem {...data.goods[8]} />
                 <ListItem {...data.goods[9]} />
                 <ListItem {...data.goods[10]} />
                 <ListItem {...data.goods[11]} />
-              </Listing.Items>
+                <Banner {...data.banners[1]} />
+              </Listing.Main>
               <Listing.Nav>
                 <Categories items={data.categories} />
                 <Facets>

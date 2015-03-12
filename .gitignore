@@ -57,3 +57,10 @@ npm-debug.log
 
 # Other
 .tern-port
+
+
+# React demo
+
+react/bower_components
+react/node_modules
+react/pages
