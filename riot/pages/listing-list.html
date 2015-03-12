@@ -37,21 +37,22 @@
               </x-listing-view-mode>
             </x-listing-header>
             <x-listing-content>
-              <x-listing-items>
+              <x-listing-main>
                 <x-list-item href="{data.goods[0].href}" title="{data.goods[0].title}" image="{data.goods[0].image}" description="{data.goods[0].description}" price="{data.goods[0].price}"></x-list-item>
                 <x-list-item href="{data.goods[1].href}" title="{data.goods[1].title}" image="{data.goods[1].image}" description="{data.goods[1].description}" price="{data.goods[1].price}"></x-list-item>
-                <x-banner href="#" text="Лучшие мыши на рынке! Оптом дешевле!"></x-banner>
                 <x-list-item href="{data.goods[2].href}" title="{data.goods[2].title}" image="{data.goods[2].image}" description="{data.goods[2].description}" price="{data.goods[2].price}"></x-list-item>
                 <x-list-item href="{data.goods[3].href}" title="{data.goods[3].title}" image="{data.goods[3].image}" description="{data.goods[3].description}" price="{data.goods[3].price}"></x-list-item>
                 <x-list-item href="{data.goods[4].href}" title="{data.goods[4].title}" image="{data.goods[4].image}" description="{data.goods[4].description}" price="{data.goods[4].price}"></x-list-item>
                 <x-list-item href="{data.goods[5].href}" title="{data.goods[5].title}" image="{data.goods[5].image}" description="{data.goods[5].description}" price="{data.goods[5].price}"></x-list-item>
+                <x-banner href="{data.banners[0].href}" text="{data.banners[0].text}"></x-banner>
                 <x-list-item href="{data.goods[6].href}" title="{data.goods[6].title}" image="{data.goods[6].image}" description="{data.goods[6].description}" price="{data.goods[6].price}"></x-list-item>
                 <x-list-item href="{data.goods[7].href}" title="{data.goods[7].title}" image="{data.goods[7].image}" description="{data.goods[7].description}" price="{data.goods[7].price}"></x-list-item>
                 <x-list-item href="{data.goods[8].href}" title="{data.goods[8].title}" image="{data.goods[8].image}" description="{data.goods[8].description}" price="{data.goods[8].price}"></x-list-item>
                 <x-list-item href="{data.goods[9].href}" title="{data.goods[9].title}" image="{data.goods[9].image}" description="{data.goods[9].description}" price="{data.goods[9].price}"></x-list-item>
                 <x-list-item href="{data.goods[10].href}" title="{data.goods[10].title}" image="{data.goods[10].image}" description="{data.goods[10].description}" price="{data.goods[10].price}"></x-list-item>
                 <x-list-item href="{data.goods[11].href}" title="{data.goods[11].title}" image="{data.goods[11].image}" description="{data.goods[11].description}" price="{data.goods[11].price}"></x-list-item>
-              </x-listing-items>
+                <x-banner href="{data.banners[1].href}" text="{data.banners[1].text}"></x-banner>
+              </x-listing-main>
               <x-listing-nav>
                 <x-categories items="{data.categories}"></x-categories>
                 <x-facets>

@@ -35,7 +35,7 @@ gulp.task("scripts", function() {
   return gulp.src(glob.riot)
     .pipe(plugins.plumber())
     .pipe(plugins.riot())
-    .pipe(plugins.addSrc.prepend(["bower_components/riot/riot.js", ""]))
+    .pipe(plugins.addSrc.prepend(["bower_components/riot/riot.js"]))
     .pipe(plugins.concat("script.js"))
     .pipe(plugins.header("var data = " + JSON.stringify(require("../data/listing.json")) + ";\n\n"))
     .pipe(gulp.dest("build/"))

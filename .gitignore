@@ -65,3 +65,9 @@ react/bower_components
 react/node_modules
 react/pages
 react/build
+
+# Riot demo
+
+riot/bower_components
+riot/node_modules
+riot/build

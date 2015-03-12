@@ -38,13 +38,13 @@
   </div>
 </x-listing-content>
 
-<x-listing-items>
-  <div class="listing__items{opts.advanced ? ' listing__items_advanced' : ''}">
+<x-listing-main>
+  <div class="listing__main{opts.advanced ? ' listing__main_advanced-items' : ''}">
     <inner-html/>
   </div>
 
   console.log(this.opts.advanced)
-</x-listing-items>
+</x-listing-main>
 
 <x-listing-nav>
   <div class="listing__nav">
