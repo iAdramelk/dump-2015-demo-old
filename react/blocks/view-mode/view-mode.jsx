@@ -11,13 +11,18 @@ var ViewMode = React.createClass({
 });
 
 ViewMode.Item = React.createClass({
-  mod: function () {
-    return "view-mode__link" + (this.props.current ? ' is-current' : '');
+  linkElement: function () {
+    if (this.props.current) {
+      return <span className="view-mode__link is-current">{this.props.text}</span>;
+    }
+    else {
+      return <a href={this.props.href} className="view-mode__link">{this.props.text}</a>;
+    }
   },
   render: function() {
     return (
       <div className="view-mode__item">
-        <a href={this.props.href} className={this.mod()}>{this.props.text}</a>
+        {this.linkElement()}
       </div>
     );
   }

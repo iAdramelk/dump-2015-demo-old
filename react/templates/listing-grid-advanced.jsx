@@ -37,10 +37,9 @@ var PageList = React.createClass({
               <Listing.Breadcrumbs>
                 <Breadcrumbs>
                   <Breadcrumbs.Item {...data.breadcrumbs[0]} />
-                  <Breadcrumbs.Item {...data.breadcrumbs[1]} />
                 </Breadcrumbs>
               </Listing.Breadcrumbs>
-              <Listing.Title title={data.title} />
+              <Listing.Title title="Платья бальные" />
               <Listing.Sorting>
                 <ArticleLead text={data.article.lead} href={data.article.href} />
               </Listing.Sorting>

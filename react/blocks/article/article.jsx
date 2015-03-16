@@ -3,7 +3,7 @@ var React = require('react');
 var Article = React.createClass({
   render: function() {
     return (
-      <div className="article" dangerouslySetInnerHTML={this.props.text}></div>
+      <div className="article" dangerouslySetInnerHTML={{__html: this.props.text}}></div>
     );
   }
 });
