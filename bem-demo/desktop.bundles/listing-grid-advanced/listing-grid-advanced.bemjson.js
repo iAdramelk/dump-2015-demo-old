@@ -228,8 +228,8 @@
                         elem: 'item',
                         content: {
                           elem: 'link',
-                          mix: [{block: 'is-current'}],
-                          tag: 'span',
+                          tag: 'a',
+                          attrs: {'href': '#'},
                           content: 'плиткой'
                         }
                       },
@@ -237,8 +237,8 @@
                         elem: 'item',
                         content: {
                           elem: 'link',
-                          tag: 'a',
-                          attrs: {'href': '#'},
+                          mix: [{block: 'is-current'}],
+                          tag: 'span',
                           content: 'списком'
                         }
                       }
@@ -560,8 +560,8 @@
                           elemMods: {'level': '3'},
                           content: {
                             elem: 'link',
-                            tag: 'a',
-                            attrs: {'href': '#'},
+                            mix: {block: 'is-current'},
+                            tag: 'span',
                             content: 'Коктельные платья'
                           }
                         },

@@ -19,13 +19,13 @@
   ],
   "title": "Коктельные платья",
   "sorting": [
-    { "href": "#", "text": "по популярности" },
-    { "href": "#", "text": "по цене" },
-    { "href": "#", "text": "по новизне" }
+    { "href": "#", "text": "по популярности", "current": true },
+    { "href": "#", "text": "по цене", "current": false },
+    { "href": "#", "text": "по новизне", "current": false }
   ],
   "viewMode": [
-    { "href": "#", "text": "плиткой"  },
-    { "href": "#", "text": "списком" }
+    { "href": "#", "text": "плиткой", "current": false  },
+    { "href": "#", "text": "списком", "current": true }
   ],
   "goods": [
     {
