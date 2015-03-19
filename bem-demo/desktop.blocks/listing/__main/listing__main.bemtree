@@ -15,37 +15,26 @@ block('listing').elem('main').def().match(!this.ctx._wrapped)(
   });
 
 block('listing').elem('main').content()(function () {
-  var banners = [
-    {
-      text: 'Лучшие мыши на рынке! Оптом дешевле!',
-      link: '#',
-      position: {
-        'listing-list': 6,
-        'listing-grid': 3,
-        'listing-grid-advanced': 2
-      }
+  var bannerPositions = {
+    0: {
+      'listing-list': 6,
+      'listing-grid': 3,
+      'listing-grid-advanced': 2
     },
-    {
-      text: 'Лучшие тараканы!',
-      link: '#',
-      position: {
-        'listing-list': 12,
-        'listing-grid': 6,
-        'listing-grid-advanced': 3
-      }
+    1: {
+      'listing-list': 12,
+      'listing-grid': 6,
+      'listing-grid-advanced': 3
     },
-    {
-      text: 'А туфли у нас вообще отпад!',
-      link: '#',
-      position: {
-        //'listing-list': 7,
-        'listing-grid': 9,
-        'listing-grid-advanced': 8
-      }
+    2: {
+      //'listing-list': 7,
+      'listing-grid': 9,
+      'listing-grid-advanced': 8
     }
-  ];
+  };
 
   var goods = this.ctx.goods,
+    banners = this.ctx.banners,
     goodsBem;
 
   var mod = bem.bundle;
@@ -126,17 +115,17 @@ block('listing').elem('main').content()(function () {
       } : {},
       content: {
         elem: 'link',
-        url: n.link,
+        url: n.href,
         content: n.text
       }
     };
   }
 
-  function addBanners(items, banners) {
+  function addBanners(items, banners, positions, mod) {
     var position;
 
     for (var i = 0, c = banners.length; i < c; i++) {
-      position = banners[i].position[mod];
+      position = positions[i][mod];
       if (position) {
         items.splice(position + i, 0, bannerBem(banners[i]));
       }
@@ -153,7 +142,7 @@ block('listing').elem('main').content()(function () {
       break;
   }
 
-  addBanners(goodsBem, banners);
+  addBanners(goodsBem, banners, bannerPositions, mod);
 
   return goodsBem;
 
