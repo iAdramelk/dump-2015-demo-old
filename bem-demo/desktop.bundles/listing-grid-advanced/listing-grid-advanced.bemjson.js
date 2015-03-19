@@ -252,7 +252,7 @@
               content: [
                 {
                   elem: 'main',
-                  mods: {'advanced': true},
+                  mods: {'advanced-items': true},
                   content: [
                     {
                       block: 'preview-item',

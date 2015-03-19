@@ -1,3 +1,19 @@
+block('listing').elem('main').def().match(!this.ctx._wrapped)(
+  function () {
+    var ctx = this.ctx;
+    var mod = bem.bundle;
+
+    ctx._wrapped = true;
+
+    if (mod === 'listing-grid-advanced') {
+      ctx.mods = {
+        'advanced-items': true
+      };
+    }
+
+    return applyCtx(ctx)
+  });
+
 block('listing').elem('main').content()(function () {
   var goods = this.ctx.goods,
     goodsBem,
@@ -6,10 +22,10 @@ block('listing').elem('main').content()(function () {
   var mod = bem.bundle;
 
   function formatMoney(val) {
-    return (val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ')  + ' руб.';
+    return (val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ') + ' руб.';
   }
 
-  function listItem (n) {
+  function listItem(n) {
     return {
       block: 'list-item',
       content: [
@@ -44,7 +60,7 @@ block('listing').elem('main').content()(function () {
     };
   }
 
-  function previewItem(n){
+  function previewItem(n) {
     return {
       block: 'preview-item',
       content: {
@@ -74,6 +90,9 @@ block('listing').elem('main').content()(function () {
 
   bannerBem = {
     block: 'banner',
+    mods: {
+      'grid': true
+    },
     content: {
       elem: 'link',
       url: '#',
@@ -87,6 +106,7 @@ block('listing').elem('main').content()(function () {
       goodsBem.splice(2, 0, bannerBem);
       break;
     case 'listing-grid':
+    case 'listing-grid-advanced':
       goodsBem = goods.map(previewItem);
       goodsBem.splice(3, 0, bannerBem);
       break;
