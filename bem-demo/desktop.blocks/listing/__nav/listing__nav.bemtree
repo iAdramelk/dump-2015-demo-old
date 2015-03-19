@@ -1,4 +1,4 @@
-block('listing__nav').content()(function () {
+block('listing').elem('nav').content()(function () {
   var categories = this.ctx.categories,
     materialFacet = this.ctx.facets[1],
     sizeFacet = this.ctx.facets[2];

@@ -1,4 +1,4 @@
-block('listing__main').content()(function () {
+block('listing').elem('main').content()(function () {
   var goods = this.ctx.goods,
     goodsBem,
     bannerBem;

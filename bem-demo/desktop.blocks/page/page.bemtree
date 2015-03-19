@@ -47,8 +47,8 @@ block('page')(
             {
               elem: 'content',
               content: [
-                {block: 'listing__main', goods: goods},
-                {block: 'listing__nav', categories: categories, facets: facets}
+                {elem: 'main', goods: goods},
+                {elem: 'nav', categories: categories, facets: facets}
               ]
             }
           ]
