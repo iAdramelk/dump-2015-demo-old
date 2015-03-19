@@ -15,11 +15,41 @@ block('listing').elem('main').def().match(!this.ctx._wrapped)(
   });
 
 block('listing').elem('main').content()(function () {
+  var banners = [
+    {
+      text: 'Лучшие мыши на рынке! Оптом дешевле!',
+      link: '#',
+      position: {
+        'listing-list': 6,
+        'listing-grid': 3,
+        'listing-grid-advanced': 2
+      }
+    },
+    {
+      text: 'Лучшие тараканы!',
+      link: '#',
+      position: {
+        'listing-list': 12,
+        'listing-grid': 6,
+        'listing-grid-advanced': 3
+      }
+    },
+    {
+      text: 'А туфли у нас вообще отпад!',
+      link: '#',
+      position: {
+        //'listing-list': 7,
+        'listing-grid': 9,
+        'listing-grid-advanced': 8
+      }
+    }
+  ];
+
   var goods = this.ctx.goods,
-    goodsBem,
-    bannerBem;
+    goodsBem;
 
   var mod = bem.bundle;
+
 
   function formatMoney(val) {
     return (val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ') + ' руб.';
@@ -88,29 +118,43 @@ block('listing').elem('main').content()(function () {
     };
   }
 
-  bannerBem = {
-    block: 'banner',
-    mods: {
-      'grid': true
-    },
-    content: {
-      elem: 'link',
-      url: '#',
-      content: 'Лучшие мыши на рынке! Оптом дешевле!'
+  function bannerBem(n) {
+    return {
+      block: 'banner',
+      mods: mod === 'listing-grid-advanced' ? {
+        'grid': true
+      } : {},
+      content: {
+        elem: 'link',
+        url: n.link,
+        content: n.text
+      }
+    };
+  }
+
+  function addBanners(items, banners) {
+    var position;
+
+    for (var i = 0, c = banners.length; i < c; i++) {
+      position = banners[i].position[mod];
+      if (position) {
+        items.splice(position + i, 0, bannerBem(banners[i]));
+      }
     }
-  };
+  }
 
   switch (mod) {
     case 'listing-list':
       goodsBem = goods.map(listItem);
-      goodsBem.splice(2, 0, bannerBem);
       break;
     case 'listing-grid':
     case 'listing-grid-advanced':
       goodsBem = goods.map(previewItem);
-      goodsBem.splice(3, 0, bannerBem);
       break;
   }
 
+  addBanners(goodsBem, banners);
+
   return goodsBem;
+
 });
