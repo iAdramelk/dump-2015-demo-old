@@ -14,7 +14,8 @@ block('listing').elem('nav').content()(function () {
             elemMods: {'level': n.level},
             content: {
               elem: 'link',
-              tag: 'a',
+              tag: n.current ? 'span' : 'a',
+              mix: n.current ? {'block': 'is-current'} : {},
               attrs: {'href': n.href},
               content: n.text,
               current: n.current

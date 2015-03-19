@@ -24,8 +24,8 @@
     { "href": "#", "text": "по новизне", "current": false  }
   ],
   "viewMode": [
-    { "href": "#", "text": "плиткой", "current": true },
-    { "href": "#", "text": "списком", "current": false }
+    { "href": "#", "text": "плиткой", "current": false },
+    { "href": "#", "text": "списком", "current": true }
   ],
   "goods": [
     {
