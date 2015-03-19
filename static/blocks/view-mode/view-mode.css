@@ -1,7 +1,8 @@
 .view-mode {}
 
-.view-mode__mode {
+.view-mode__item {
   display: inline-block;
+  margin: 0 3px;
 }
 
 .view-mode__link {
@@ -10,5 +11,6 @@
 }
 
 .view-mode__link.is-current {
-  background: $background;
+  background: $bannerBg;
+  color: $bannerText;
 }

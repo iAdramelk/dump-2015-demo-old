@@ -1,4 +1,7 @@
 .price {
+}
+
+.price__range {
   display: flex;
   justify-content: space-between;
 }
@@ -35,3 +38,13 @@
 .price__group_from {}
 
 .price__group_to {}
+
+.price__show {
+  margin-top: 12px;
+  border: 1px solid #bbe;
+  padding: 6px 0 3px;
+  font-size: 14px;
+  text-align: center;
+  color: $link;
+  cursor: pointer;
+}

@@ -6,7 +6,7 @@ var plugins      = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 
 var stylesGlob  = [
-  'node_modules/normalize.css/normalize.css',
+  'bower_components/normalize.css/normalize.css',
   'blocks/*/**.css'
 ];
 
@@ -27,7 +27,6 @@ gulp.task('styles', function() {
     .pipe(plugins.postcss(postcssGlob))
     .pipe(plugins.minifyCss())
     .pipe(plugins.remember('styles'))
-    .pipe(gulp.dest('build/'))
     .pipe(plugins.concat('style.css'))
     .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest('build/'))
