@@ -18,7 +18,7 @@ var Header = React.createClass({
         </div>
         <div className="header__title">Золушка</div>
         <div className="header__search">
-          {this.props.childern}
+          {this.props.children}
         </div>
       </div>
     );
