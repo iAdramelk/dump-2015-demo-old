@@ -228,8 +228,8 @@
                         elem: 'item',
                         content: {
                           elem: 'link',
-                          mix: [{block: 'is-current'}],
-                          tag: 'span',
+                          tag: 'a',
+                          attrs: {'href': '#'},
                           content: 'плиткой'
                         }
                       },
@@ -237,8 +237,8 @@
                         elem: 'item',
                         content: {
                           elem: 'link',
-                          tag: 'a',
-                          attrs: {'href': '#'},
+                          mix: [{block: 'is-current'}],
+                          tag: 'span',
                           content: 'списком'
                         }
                       }
@@ -316,15 +316,6 @@
                           ]
                         }
                       ]
-                    },
-                    {
-                      block: 'banner',
-                      content: {
-                        elem: 'link',
-                        tag: 'a',
-                        attrs: {'href': '#'},
-                        content: 'Лучшие мыши на рынке! Оптом дешевле!'
-                      }
                     },
                     {
                       block: 'list-item',
@@ -453,6 +444,15 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      block: 'banner',
+                      content: {
+                        elem: 'link',
+                        tag: 'a',
+                        attrs: {'href': '#'},
+                        content: 'Лучшие мыши на рынке! Оптом дешевле!'
+                      }
                     },
                     {
                       block: 'list-item',
@@ -645,6 +645,15 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      block: 'banner',
+                      content: {
+                        elem: 'link',
+                        tag: 'a',
+                        attrs: {'href': '#'},
+                        content: 'Лучшие мыши на рынке! Оптом дешевле!'
+                      }
                     }
                   ]
                 },
@@ -679,8 +688,8 @@
                           elemMods: {'level': '3'},
                           content: {
                             elem: 'link',
-                            tag: 'a',
-                            attrs: {'href': '#'},
+                            mix: {block: 'is-current'},
+                            tag: 'span',
                             content: 'Коктельные платья'
                           }
                         },
@@ -1001,4 +1010,4 @@
       }
     ]
   }
-])
+]);

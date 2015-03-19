@@ -2,15 +2,15 @@ block('view-mode').content()(function () {
   var options = this.ctx.options;
 
   return [
-    options.map(function (data) {
+    options.map(function (n) {
       return {
         elem: 'item',
         content: {
           elem: 'link',
-          mix: data.current ? [{block: 'is-current'}] : [],
-          current: data.current,
-          url: data.href,
-          content: data.text
+          mix: n.current ? {block: 'is-current'} : false,
+          current: n.current,
+          url: n.href,
+          content: n.text
         }
       };
     })

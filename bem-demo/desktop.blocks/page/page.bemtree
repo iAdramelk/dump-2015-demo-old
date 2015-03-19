@@ -12,6 +12,7 @@ block('page')(
       viewMode = data.viewMode,
       goods = data.goods,
       categories = data.categories,
+      banners = data.banners,
       facets = data.facets;
 
     return [
@@ -47,7 +48,7 @@ block('page')(
             {
               elem: 'content',
               content: [
-                {elem: 'main', goods: goods},
+                {elem: 'main', goods: goods, banners: banners},
                 {elem: 'nav', categories: categories, facets: facets}
               ]
             }
