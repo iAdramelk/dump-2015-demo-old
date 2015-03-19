@@ -1,14 +1,14 @@
-block('breadcrumbs').content()(function() {
-    var options = this.ctx.options;
+block('breadcrumbs').content()(function () {
+  var options = this.ctx.options;
 
-    return options.map(function (n) {
-        return {
-            elem: 'item',
-            content: {
-                elem: 'link',
-                url: n.href,
-                content: n.text
-            }
-        };
-    });
+  return options.map(function (n) {
+    return {
+      elem: 'item',
+      content: {
+        elem: 'link',
+        url: n.href,
+        content: n.text
+      }
+    };
+  });
 });

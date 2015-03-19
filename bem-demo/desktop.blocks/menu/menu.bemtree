@@ -1,18 +1,18 @@
-block('menu').content()(function() {
-    var menu = this.ctx.menu;
+block('menu').content()(function () {
+  var menu = this.ctx.menu;
 
-    return {
-       elem: 'content',
-       content: menu.items.map(function(data) {
-            return {
-               elem: 'item',
-               content: {
-                   elem: 'link',
-                   mix: data.current ? [ { block: 'is-current' } ] : [],
-                   url: data.href,
-                   content: data.text
-               }
-           };
-       })
-   };
+  return {
+    elem: 'content',
+    content: menu.items.map(function (data) {
+      return {
+        elem: 'item',
+        content: {
+          elem: 'link',
+          mix: data.current ? [{block: 'is-current'}] : [],
+          url: data.href,
+          content: data.text
+        }
+      };
+    })
+  };
 });
