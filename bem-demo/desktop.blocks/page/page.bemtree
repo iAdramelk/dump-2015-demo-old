@@ -1,4 +1,4 @@
-block('page').mod('bundle', 'listing-grid-advanced')(
+block('page')(
   def()(function () {
     this.ctx.title = 'Пирожки';
     return applyNext();
@@ -47,8 +47,8 @@ block('page').mod('bundle', 'listing-grid-advanced')(
             {
               elem: 'content',
               content: [
-                {block: 'listing-items', goods: goods},
-                {block: 'listing-nav', categories: categories, facets: facets}
+                {block: 'listing__main', goods: goods},
+                {block: 'listing__nav', categories: categories, facets: facets}
               ]
             }
           ]

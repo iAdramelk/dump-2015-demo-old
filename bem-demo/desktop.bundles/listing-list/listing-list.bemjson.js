@@ -6,8 +6,7 @@
     styles: [
       {
         elem: 'css',
-        'url': 'listing-list.css',
-        'ie': false
+        'url': 'listing-list.css'
       }
     ],
     content: [
@@ -252,7 +251,7 @@
               elem: 'content',
               content: [
                 {
-                  block: 'listing-items',
+                  elem: 'main',
                   content: [
                     {
                       block: 'list-item',
@@ -650,7 +649,7 @@
                   ]
                 },
                 {
-                  block: 'listing-nav',
+                  elem: 'nav',
                   content: [
                     {
                       block: 'categories',
