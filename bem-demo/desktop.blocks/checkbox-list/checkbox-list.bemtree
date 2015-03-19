@@ -1,19 +1,28 @@
 block('checkbox-list').content()(function () {
-  var items = this.ctx.items || [];
+  var items = this.ctx.items || [],
+      limit = this.ctx.limit || 0;
 
-  return items.map(function (n) {
-    return {
-      elem: 'item',
-      content: {
-        elem: 'link',
-        tag: 'a',
-        mix: n.selected ? [{block: 'is-selected'}] : [],
-        attrs: {
-          href: n.href,
-          checked: n.selected
-        },
-        content: n.text
-      }
-    };
-  });
+  return [
+    {
+      elem: 'list',
+      content: (limit ? items.slice(0, limit) : items).map(function (n) {
+        return {
+          elem: 'item',
+          content: {
+            elem: 'link',
+            tag: 'a',
+            mix: n.selected ? [{block: 'is-selected'}] : [],
+            attrs: {
+              href: n.href,
+              checked: n.selected
+            },
+            content: n.text
+          }
+        };
+      })
+    },
+    (limit && items.length > limit) ?
+      {elem: 'more', content: ['Еще ', items.length - limit, '…']} :
+      ''
+  ];
 });

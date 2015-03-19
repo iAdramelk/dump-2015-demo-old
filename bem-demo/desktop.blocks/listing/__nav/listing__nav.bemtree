@@ -36,44 +36,49 @@ block('listing__nav').content()(function () {
                 block: 'price',
                 content: [
                   {
-                    elem: 'group',
-                    elemMods: {'from': true},
+                    elem: 'range',
                     content: [
                       {
-                        elem: 'title',
-                        tag: 'label',
-                        content: 'От:'
+                        elem: 'group',
+                        elemMods: {'from': true},
+                        content: [
+                          {
+                            elem: 'title',
+                            tag: 'label',
+                            content: 'От:'
+                          },
+                          {
+                            elem: 'field',
+                            tag: 'input',
+                            attrs: {'type': 'text', 'placeholder': '900'}
+                          }
+                        ]
                       },
                       {
-                        elem: 'field',
-                        tag: 'input',
-                        attrs: {'type': 'text', 'placeholder': '900'}
+                        elem: 'group',
+                        elemMods: {'to': true},
+                        content: [
+                          {
+                            elem: 'title',
+                            tag: 'label',
+                            content: 'До:'
+                          },
+                          {
+                            elem: 'field',
+                            tag: 'input',
+                            attrs: {
+                              'type': 'text',
+                              'placeholder': '20 000'
+                            }
+                          }
+                        ]
                       }
                     ]
                   },
-                  {
-                    elem: 'group',
-                    elemMods: {'to': true},
-                    content: [
-                      {
-                        elem: 'title',
-                        tag: 'label',
-                        content: 'До:'
-                      },
-                      {
-                        elem: 'field',
-                        tag: 'input',
-                        attrs: {
-                          'type': 'text',
-                          'placeholder': '20 000'
-                        }
-                      }
-                    ]
-                  }
+                  {elem: 'show', content: 'Показать'}
                 ]
               }
-            },
-            {elem: 'more', content: 'Показать'}
+            }
           ]
         },
         {
@@ -87,10 +92,10 @@ block('listing__nav').content()(function () {
               elem: 'content',
               content: {
                 block: 'checkbox-list',
-                items: materialFacet.content.items.slice(0, materialFacet.content.limit)
+                items: materialFacet.content.items,
+                limit: materialFacet.content.limit
               }
-            },
-            {elem: 'more', content: 'Еще 11…'}
+            }
           ]
         },
         {
