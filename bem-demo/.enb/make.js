@@ -46,7 +46,6 @@ function getDesktops(config) {
     return [
         { path: 'libs/bem-core/common.blocks', check: false },
         { path: 'libs/bem-core/desktop.blocks', check: false },
-        { path: '../static/build', check: false },
         'common.blocks',
         'desktop.blocks'
     ].map(function (level) {

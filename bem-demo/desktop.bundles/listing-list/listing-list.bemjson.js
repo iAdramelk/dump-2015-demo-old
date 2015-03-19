@@ -191,7 +191,7 @@
                         content: 'Сортировать:'
                       },
                       {
-                        elem: 'mode',
+                        elem: 'item',
                         content: {
                           elem: 'link',
                           mix: [{block: 'is-current'}],
@@ -200,7 +200,7 @@
                         }
                       },
                       {
-                        elem: 'mode',
+                        elem: 'item',
                         content: {
                           elem: 'link',
                           tag: 'a',
@@ -209,7 +209,7 @@
                         }
                       },
                       {
-                        elem: 'mode',
+                        elem: 'item',
                         content: {
                           elem: 'link',
                           tag: 'a',
@@ -226,7 +226,7 @@
                     block: 'view-mode',
                     content: [
                       {
-                        elem: 'mode',
+                        elem: 'item',
                         content: {
                           elem: 'link',
                           mix: [{block: 'is-current'}],
@@ -235,7 +235,7 @@
                         }
                       },
                       {
-                        elem: 'mode',
+                        elem: 'item',
                         content: {
                           elem: 'link',
                           tag: 'a',

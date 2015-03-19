@@ -4,7 +4,7 @@ block('view-mode').content()(function () {
   return [
     options.map(function (data) {
       return {
-        elem: 'mode',
+        elem: 'item',
         content: {
           elem: 'link',
           mix: data.current ? [{block: 'is-current'}] : [],
