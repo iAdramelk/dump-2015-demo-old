@@ -7,6 +7,7 @@
 
 <x-sorting-item>
   <div class="sorting__item">
-    <a href="{opts.href}" class="sorting__link{opts.current ? ' is-current' : ''}">{opts.text}</a>
+    <a href="{opts.href}" class="sorting__link" if={!opts.current}>{opts.text}</a>
+    <span class="sorting__link is-current" if={opts.current}>{opts.text}</span>
   </div>
 </x-sorting-item>

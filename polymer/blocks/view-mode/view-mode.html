@@ -7,10 +7,15 @@
   </template>
 </polymer-element>
 
-<polymer-element name="x-view-mode-item" attributes="href text current" noscript>
+<polymer-element name="x-view-mode-item" attributes="href text current">
   <template>
     <link rel="stylesheet" href="view-mode-item.css">
-
-    <a href="{{href}}" class="link">{{text}}</a>
+    <template if="{{!current}}">
+      <a href="{{href}}" class="link">{{text}}</a>
+    </template>
+    <template if="{{current}}">
+      <span class="link is-current">{{text}}</span>
+    </template>
   </template>
+  <script src="view-mode-item.js"></script>
 </polymer-element>

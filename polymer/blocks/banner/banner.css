@@ -1,7 +1,7 @@
 :host {
   display: block;
   height: 88px;
-  background: #ddd;
+  background: #999;
 }
 
 .link {
@@ -10,11 +10,7 @@
   line-height: 88px;
   text-align: center;
   text-decoration: none;
-  color: #808080;
-}
-
-.link:hover {
-  color: #00e;
+  color: #fff;
 }
 
 :host([grid]) {
@@ -35,6 +31,9 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   height: 100%;
+  padding: 20px;
   line-height: 36px;
 }

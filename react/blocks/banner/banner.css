@@ -1,7 +1,7 @@
 .banner {
 
   height: 88px;
-  background: $background;
+  background: $bannerBg;
 }
 
 .banner__link {
@@ -10,12 +10,8 @@
   line-height: 88px;
   text-align: center;
   text-decoration: none;
-  color: $comment;
+  color: $bannerText;
 
-}
-
-.banner__link:hover {
-  color: $link;
 }
 
 .banner_grid {

@@ -20,5 +20,11 @@
 }
 
 .categories__link {
-  line-height: 24px;
+  display: inline-block;
+  padding: 6px 5px 4px;
+}
+
+.categories__link.is-current {
+  background: $bannerBg;
+  color: $bannerText;
 }

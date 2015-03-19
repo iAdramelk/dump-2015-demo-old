@@ -6,5 +6,7 @@ module.exports = {
     text: '#333',
     comment: '#808080',
     background: '#ddd',
+    bannerBg: '#999',
+    bannerText: '#fff',
     borders: '#808080'
 };

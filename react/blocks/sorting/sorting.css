@@ -16,5 +16,6 @@
 }
 
 .sorting__link.is-current {
-  background: $background;
+  background: $bannerBg;
+  color: $bannerText;
 }

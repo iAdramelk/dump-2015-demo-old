@@ -20,6 +20,13 @@
   <template>
       <link rel="stylesheet" href="categories-item.css">
 
-      <a href="{{href}}" class="link link_level_{{level}}">{{text}}</a>
+      <template if="{{!current}}">
+        <a href="{{href}}" class="link link_level_{{level}}">{{text}}</a>
+      </template>
+      <template if="{{current}}">
+        <span class="link link_level_{{level}} is-current">{{text}}</span>
+      </template>
+      </template>
   </template>
+  <script src="categories-item.js"></script>
 </polymer-element>

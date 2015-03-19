@@ -11,5 +11,6 @@
 }
 
 .view-mode__link.is-current {
-  background: $background;
+  background: $bannerBg;
+  color: $bannerText;
 }

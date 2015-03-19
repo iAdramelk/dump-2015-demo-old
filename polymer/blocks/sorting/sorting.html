@@ -13,6 +13,14 @@
   <template>
     <link rel="stylesheet" href="sorting-item.css">
 
-    <a href="{{href}}" class="link">{{text}}</a>
+    <template if="{{!current}}">
+      <a href="{{href}}" class="link">{{text}}</a>
+    </template>
+    <template if="{{current}}">
+      <span class="link is-current">{{text}}</span>
+    </template>
   </template>
+
+  </template>
+  <script src="sorting-item.js"></script>
 </polymer-element>
