@@ -727,46 +727,50 @@
                               elem: 'content',
                               content: {
                                 block: 'price',
-                                content: [
-                                  {
-                                    elem: 'group',
-                                    elemMods: {'from': true},
-                                    content: [
-                                      {
-                                        elem: 'title',
-                                        tag: 'label',
-                                        content: 'От:'
-                                      },
-                                      {
-                                        elem: 'field',
-                                        tag: 'input',
-                                        attrs: {'type': 'text', 'placeholder': '900'}
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    elem: 'group',
-                                    elemMods: {'to': true},
-                                    content: [
-                                      {
-                                        elem: 'title',
-                                        tag: 'label',
-                                        content: 'До:'
-                                      },
-                                      {
-                                        elem: 'field',
-                                        tag: 'input',
-                                        attrs: {
-                                          'type': 'text',
-                                          'placeholder': '20 000'
+                                content: [{
+                                  elem: 'range',
+                                  content: [
+                                    {
+                                      elem: 'group',
+                                      elemMods: {'from': true},
+                                      content: [
+                                        {
+                                          elem: 'title',
+                                          tag: 'label',
+                                          content: 'От:'
+                                        },
+                                        {
+                                          elem: 'field',
+                                          tag: 'input',
+                                          attrs: {'type': 'text', 'placeholder': '900'}
                                         }
-                                      }
-                                    ]
-                                  }
+                                      ]
+                                    },
+                                    {
+                                      elem: 'group',
+                                      elemMods: {'to': true},
+                                      content: [
+                                        {
+                                          elem: 'title',
+                                          tag: 'label',
+                                          content: 'До:'
+                                        },
+                                        {
+                                          elem: 'field',
+                                          tag: 'input',
+                                          attrs: {
+                                            'type': 'text',
+                                            'placeholder': '20 000'
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                  {elem: 'show', content: 'Показать'}
                                 ]
                               }
-                            },
-                            {elem: 'more', content: 'Показать'}
+                            }
                           ]
                         },
                         {
@@ -782,47 +786,52 @@
                                 block: 'checkbox-list',
                                 content: [
                                   {
-                                    elem: 'item',
-                                    content: {
-                                      elem: 'link',
-                                      mix: [{block: 'is-selected'}],
-                                      tag: 'a',
-                                      attrs: {'href': '#'},
-                                      content: 'Акрил'
-                                    }
+                                    elem: 'list',
+                                    content: [
+                                      {
+                                        elem: 'item',
+                                        content: {
+                                          elem: 'link',
+                                          mix: [{block: 'is-selected'}],
+                                          tag: 'a',
+                                          attrs: {'href': '#'},
+                                          content: 'Акрил'
+                                        }
+                                      },
+                                      {
+                                        elem: 'item',
+                                        content: {
+                                          elem: 'link',
+                                          tag: 'a',
+                                          attrs: {'href': '#'},
+                                          content: 'Вискоза'
+                                        }
+                                      },
+                                      {
+                                        elem: 'item',
+                                        content: {
+                                          elem: 'link',
+                                          mix: [{block: 'is-selected'}],
+                                          tag: 'a',
+                                          attrs: {'href': '#'},
+                                          content: 'Лайкра'
+                                        }
+                                      },
+                                      {
+                                        elem: 'item',
+                                        content: {
+                                          elem: 'link',
+                                          tag: 'a',
+                                          attrs: {'href': '#'},
+                                          content: 'Лен'
+                                        }
+                                      }
+                                    ]
                                   },
-                                  {
-                                    elem: 'item',
-                                    content: {
-                                      elem: 'link',
-                                      tag: 'a',
-                                      attrs: {'href': '#'},
-                                      content: 'Вискоза'
-                                    }
-                                  },
-                                  {
-                                    elem: 'item',
-                                    content: {
-                                      elem: 'link',
-                                      mix: [{block: 'is-selected'}],
-                                      tag: 'a',
-                                      attrs: {'href': '#'},
-                                      content: 'Лайкра'
-                                    }
-                                  },
-                                  {
-                                    elem: 'item',
-                                    content: {
-                                      elem: 'link',
-                                      tag: 'a',
-                                      attrs: {'href': '#'},
-                                      content: 'Лен'
-                                    }
-                                  }
+                                  {elem: 'more', content: 'Еще 11…'}
                                 ]
                               }
-                            },
-                            {elem: 'more', content: 'Еще 11…'}
+                            }
                           ]
                         },
                         {

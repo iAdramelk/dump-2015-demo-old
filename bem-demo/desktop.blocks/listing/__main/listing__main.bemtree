@@ -3,7 +3,13 @@ block('listing').elem('main').content()(function () {
     goodsBem,
     bannerBem;
 
-  goodsBem = goods.map(function (n) {
+  var mod = bem.bundle;
+
+  function formatMoney(val) {
+    return (val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ')  + ' руб.';
+  }
+
+  function listItem (n) {
     return {
       block: 'list-item',
       content: [
@@ -19,7 +25,7 @@ block('listing').elem('main').content()(function () {
         {
           elem: 'meta',
           content: [
-            {elem: 'price', content: n.price + ' руб.'},
+            {elem: 'price', content: formatMoney(n.price)},
             {
               elem: 'title',
               content: {
@@ -36,7 +42,35 @@ block('listing').elem('main').content()(function () {
         }
       ]
     };
-  });
+  }
+
+  function previewItem(n){
+    return {
+      block: 'preview-item',
+      content: {
+        elem: 'link',
+        tag: 'a',
+        attrs: {href: n.href},
+        content: [
+          {
+            elem: 'image',
+            tag: 'img',
+            attrs: {src: '../' + n.image}
+          },
+          {
+            elem: 'meta',
+            content: [
+              {
+                elem: 'title',
+                content: n.title
+              },
+              {elem: 'price', content: formatMoney(n.price)},
+            ]
+          }
+        ]
+      }
+    };
+  }
 
   bannerBem = {
     block: 'banner',
@@ -47,6 +81,16 @@ block('listing').elem('main').content()(function () {
     }
   };
 
-  goodsBem.splice(2, 0, bannerBem);
+  switch (mod) {
+    case 'listing-list':
+      goodsBem = goods.map(listItem);
+      goodsBem.splice(2, 0, bannerBem);
+      break;
+    case 'listing-grid':
+      goodsBem = goods.map(previewItem);
+      goodsBem.splice(3, 0, bannerBem);
+      break;
+  }
+
   return goodsBem;
 });
