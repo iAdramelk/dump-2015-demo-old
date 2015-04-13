@@ -1,8 +1,9 @@
-block('menu').content()(function () {
+block('categories').content()(function () {
 
   return this.ctx.items.map(function (data) {
     return {
       elem: 'item',
+      elemMods: {'level': data.level},
       href: data.href,
       text: data.text,
       current: data.current

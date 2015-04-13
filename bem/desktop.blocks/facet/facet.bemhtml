@@ -1,0 +1,20 @@
+block('facet')(
+
+  content()(function() {
+    return [
+      {
+        elem: 'title',
+        content: this.ctx.title
+      },
+      {
+        elem: 'content',
+        content: this.ctx.content
+      }
+    ];
+  }),
+
+  cls()(function(){
+    return this.ctx.closed ? 'is-closed' : '';
+  })
+
+);

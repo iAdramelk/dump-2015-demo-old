@@ -21,14 +21,12 @@ module.exports = function (config) {
             [require('enb-bemxjst/techs/bemhtml-old'), { devMode: process.env.BEMHTML_ENV === 'development' }],
 
             // html
-            [require('enb-bemxjst/techs/html-from-bemjson'), { target: '?.static.html' }],
             [require('./techs/html-from-bemtree')]
         ]);
 
         nodeConfig.addTargets([
             '?.css',
             '?.bemtree.js',
-            '?.static.html',
             '?.html'
         ]);
     });

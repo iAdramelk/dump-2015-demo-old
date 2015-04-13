@@ -1,0 +1,277 @@
+block('page')(
+  def()(function () {
+    this.ctx.title = 'Пирожки';
+    return applyNext();
+  }),
+  content()(function () {
+    var data = this.data;
+
+    return [
+      {
+        block: 'header',
+        content: {
+          block: 'search',
+          action: data.search.action,
+          query:  data.search.query
+        }
+      },
+      {
+        block: 'menu',
+        items: data.menu.items
+      },
+      {
+        block: 'content',
+        content: {
+          block: 'listing',
+          content: [
+            {
+              elem: 'header',
+              content: [
+                {
+                  elem: 'breadcrumbs',
+                  content: {
+                    block: 'breadcrumbs',
+                    content: [
+                      {
+                        elem: 'item',
+                        href: data.breadcrumbs[0].href,
+                        text: data.breadcrumbs[0].text
+                      },
+                      {
+                        elem: 'item',
+                        href: data.breadcrumbs[1].href,
+                        text: data.breadcrumbs[1].text
+                      }
+                    ]
+                  }
+                },
+                {
+                  elem: 'title',
+                  tag: 'h1',
+                  content: data.title
+                },
+                {
+                  elem: 'sorting',
+                  content: {
+                    block: 'sorting',
+                    content: [
+                      {
+                        elem: 'item',
+                        href: data.sorting[0].href,
+                        text: data.sorting[0].text,
+                        current: true
+                      },
+                      {
+                        elem: 'item',
+                        href: data.sorting[1].href,
+                        text: data.sorting[1].text,
+                        current: false
+                      },
+                      {
+                        elem: 'item',
+                        href: data.sorting[2].href,
+                        text: data.sorting[2].text,
+                        current: false
+                      }
+                    ]
+                  }
+                },
+                {
+                  elem: 'view-mode',
+                  content: {
+                    block: 'view-mode',
+                    content: [
+                      {
+                        elem: 'item',
+                        href: data.viewMode[0].href,
+                        text: data.viewMode[0].text,
+                        current: false
+                      },
+                      {
+                        elem: 'item',
+                        href: data.viewMode[1].href,
+                        text: data.viewMode[1].text,
+                        current: true
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              elem: 'content',
+              content: [
+                {
+                  elem: 'main',
+                  content: [
+                    {
+                      block: 'list-item',
+                      href: data.goods[0].href,
+                      title: data.goods[0].title,
+                      image: data.goods[0].image,
+                      description: data.goods[0].description,
+                      price: data.goods[0].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[1].href,
+                      title: data.goods[1].title,
+                      image: data.goods[1].image,
+                      description: data.goods[1].description,
+                      price: data.goods[1].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[2].href,
+                      title: data.goods[2].title,
+                      image: data.goods[2].image,
+                      description: data.goods[2].description,
+                      price: data.goods[2].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[3].href,
+                      title: data.goods[3].title,
+                      image: data.goods[3].image,
+                      description: data.goods[3].description,
+                      price: data.goods[3].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[4].href,
+                      title: data.goods[4].title,
+                      image: data.goods[4].image,
+                      description: data.goods[4].description,
+                      price: data.goods[4].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[5].href,
+                      title: data.goods[5].title,
+                      image: data.goods[5].image,
+                      description: data.goods[5].description,
+                      price: data.goods[5].price
+                    },
+                    {
+                      block: 'banner',
+                      href: data.banners[0].href,
+                      text: data.banners[0].text
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[6].href,
+                      title: data.goods[6].title,
+                      image: data.goods[6].image,
+                      description: data.goods[6].description,
+                      price: data.goods[6].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[7].href,
+                      title: data.goods[7].title,
+                      image: data.goods[7].image,
+                      description: data.goods[7].description,
+                      price: data.goods[7].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[8].href,
+                      title: data.goods[8].title,
+                      image: data.goods[8].image,
+                      description: data.goods[8].description,
+                      price: data.goods[8].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[9].href,
+                      title: data.goods[9].title,
+                      image: data.goods[9].image,
+                      description: data.goods[9].description,
+                      price: data.goods[9].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[10].href,
+                      title: data.goods[10].title,
+                      image: data.goods[10].image,
+                      description: data.goods[10].description,
+                      price: data.goods[10].price
+                    },
+                    {
+                      block: 'list-item',
+                      href: data.goods[11].href,
+                      title: data.goods[11].title,
+                      image: data.goods[11].image,
+                      description: data.goods[11].description,
+                      price: data.goods[11].price
+                    },
+                    {
+                      block: 'banner',
+                      href: data.banners[1].href,
+                      text: data.banners[1].text
+                    }
+                  ]
+                },
+                {
+                  elem: 'nav',
+                  content: [
+                    {
+                      block: 'categories',
+                      items: data.categories
+                    },
+                    {
+                      block: 'facets',
+                      content: [
+                        {
+                          block: 'facet',
+                          title: data.facets[0].title,
+                          closed: data.facets[0].closed,
+                          content: {
+                            block: 'price',
+                            from: data.facets[0].content.from,
+                            to:   data.facets[0].content.to,
+                            min:  data.facets[0].content.min,
+                            max:  data.facets[0].content.max
+                          }
+                        },
+                        {
+                          block: 'facet',
+                          title: data.facets[1].title,
+                          closed: data.facets[1].closed,
+                          content: {
+                            block: 'checkbox-list',
+                            items:   data.facets[1].content.items,
+                            compact: data.facets[1].content.compact,
+                            limit:   data.facets[1].content.limit
+                          }
+                        },
+                        {
+                          block: 'facet',
+                          title: data.facets[2].title,
+                          closed: data.facets[2].closed,
+                          content: {
+                            block: 'checkbox-list',
+                            items:   data.facets[2].content.items,
+                            compact: data.facets[2].content.compact,
+                            limit:   data.facets[2].content.limit
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        block: 'menu',
+        items: data.menu.items
+      },
+      {
+        block: 'footer'
+      }
+    ]
+  })
+);

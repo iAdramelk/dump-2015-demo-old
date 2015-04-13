@@ -1,0 +1,13 @@
+block('view-mode')(
+
+  elem('item').content()(function() {
+    return {
+      elem: 'link',
+      tag: this.ctx.current ? 'span' : 'a',
+      content: this.ctx.text,
+      attrs: this.ctx.current? '' : {href: this.ctx.href},
+      cls: this.ctx.current ? 'is-current' : ''
+    };
+  })
+
+);

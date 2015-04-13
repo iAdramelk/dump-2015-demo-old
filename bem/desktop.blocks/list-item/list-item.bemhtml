@@ -1,0 +1,44 @@
+block('list-item').content()(function(){
+
+  function formatMoney(val) {
+    return (val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ') + ' руб.';
+  }
+
+  return [
+    {
+      tag: 'a',
+      attrs: {
+        href: this.ctx.href
+      },
+      content: {
+        elem: 'image',
+        tag: 'img',
+        attrs: {src: '../' + this.ctx.image}
+      }
+    },
+    {
+      elem: 'meta',
+      content: [
+        {
+          elem: 'price',
+          content: formatMoney(this.ctx.price)
+        },
+        {
+          elem: 'title',
+          content: {
+            tag: 'a',
+            attrs: {
+              'href': this.ctx.href
+            },
+            content: this.ctx.title
+          }
+        },
+        {
+          elem: 'description',
+          content: this.ctx.description
+        }
+      ]
+    }
+  ];
+
+});

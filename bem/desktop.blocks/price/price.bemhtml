@@ -1,0 +1,50 @@
+block('price').content()(function() {
+  return [
+    {
+      elem: 'range',
+      content: [
+        {
+          elem: 'group',
+          elemMods: {'from': true},
+          content: [
+            {
+              elem: 'title',
+              tag: 'label',
+              content: 'От:'
+            },
+            {
+              elem: 'field',
+              tag: 'input',
+              attrs: {
+                type: 'text',
+                placeholder: this.ctx.min,
+                value: this.ctx.from
+              }
+            }
+          ]
+        },
+        {
+          elem: 'group',
+          elemMods: {'to': true},
+          content: [
+            {
+              elem: 'title',
+              tag: 'label',
+              content: 'До:'
+            },
+            {
+              elem: 'field',
+              tag: 'input',
+              attrs: {
+                type: 'text',
+                placeholder: this.ctx.max,
+                value: this.ctx.to
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {elem: 'show', content: 'Показать'}
+  ];
+});

@@ -1,0 +1,23 @@
+block('menu')(
+
+  content()(function() {
+    return {
+      elem: 'content',
+      content: this.ctx.content
+    };
+  }),
+
+  elem('item').content()(function() {
+    return {
+      elem: 'link',
+      tag: 'a',
+      content: this.ctx.text,
+      cls: this.ctx.current ? 'is-current' : '',
+      attrs: {
+        href: this.ctx.href
+      },
+      current: this.ctx.current
+    };
+  })
+
+);

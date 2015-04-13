@@ -1,11 +1,10 @@
-block('menu').content()(function () {
+block('help').content()(function () {
 
   return this.ctx.items.map(function (data) {
     return {
       elem: 'item',
       href: data.href,
-      text: data.text,
-      current: data.current
+      text: data.text
     }
   });
 

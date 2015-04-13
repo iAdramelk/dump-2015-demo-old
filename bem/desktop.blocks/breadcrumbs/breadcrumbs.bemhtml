@@ -1,0 +1,10 @@
+block('breadcrumbs').elem('item').content()(function () {
+  return {
+    elem: 'link',
+    tag: 'a',
+    content: this.ctx.text,
+    attrs: {
+      href: this.ctx.href
+    }
+  };
+});

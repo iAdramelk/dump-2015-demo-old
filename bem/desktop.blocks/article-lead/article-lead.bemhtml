@@ -1,0 +1,12 @@
+block('article-lead').content()(function(){
+  return [
+    this.ctx.text,
+    ' ',
+    {
+      elem: 'link',
+      tag: 'a',
+      attrs: {href: this.ctx.href},
+      content: 'Читать далее →'
+    }
+  ];
+});

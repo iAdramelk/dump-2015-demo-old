@@ -3,6 +3,7 @@
   {
     block: 'page',
     'title': 'Пирожки',
+    mods: {bundle: "listing-grid"},
     'styles': [
       {
         elem: 'css',

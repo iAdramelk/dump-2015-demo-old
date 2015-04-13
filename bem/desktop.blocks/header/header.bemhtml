@@ -1,0 +1,52 @@
+block('header').content()(function () {
+  return [
+    {
+      elem: 'subtitle',
+      content: 'интернет-магазин одежды'
+    },
+    {
+      elem: 'actions',
+      content: [
+        {
+          elem: 'action',
+          elemMods: {signin: true},
+          content: {
+            elem: 'link',
+            tag: 'a',
+            attrs: {href: '#'},
+            content: 'Войти'
+          }
+        },
+        {
+          elem: 'action',
+          elemMods: {'signup': true},
+          content: {
+            elem: 'link',
+            tag: 'a',
+            attrs: {href: '#'},
+            content: 'Зарегистрироваться'
+          }
+        },
+        {
+          elem: 'action',
+          elemMods: {'basket': true},
+          content: {
+            elem: 'link',
+            tag: 'a',
+            attrs: {href: '#'},
+            content: 'Корзина'
+          }
+        }
+      ]
+    },
+    {
+      elem: 'title',
+      content: 'Золушка'
+    },
+    {
+      elem: 'search',
+      content: this.ctx.content
+    }
+  ];
+
+});

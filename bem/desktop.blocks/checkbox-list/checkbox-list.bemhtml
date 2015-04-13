@@ -1,0 +1,34 @@
+block('checkbox-list')(
+
+  cls()(function(){
+    return this.ctx.compact ? 'is-compact' : '';
+  }),
+
+  content()(function () {
+    var items   = this.ctx.items || [],
+        shown   = this.ctx.limit ? this.ctx.limit : items.length,
+        counter = items.length - this.ctx.limit;
+
+    return [
+      {
+        elem: 'list',
+        content: items.slice(0, shown).map(function (n) {
+          return {
+            elem: 'item',
+            content: {
+              elem: 'link',
+              tag: 'a',
+              cls: n.selected ? 'is-selected' : '',
+              attrs: {
+                href: n.href,
+                checked: n.selected
+              },
+              content: n.text
+            }
+          };
+        })
+      },
+      counter ? {elem: 'more', content: ['Еще ', counter, '…']} : ''
+    ];
+  })
+);

@@ -1,0 +1,34 @@
+block('search')(
+
+  tag()('form'),
+
+  attrs()(function () {
+    return {
+      action: this.ctx.action
+    };
+  }),
+
+  content()(function() {
+    return [
+      {
+        elem: 'query',
+        tag: 'input',
+        attrs: {
+          type: 'search',
+          placeholder: 'платье бальное',
+          value: this.ctx.query
+
+        }
+      },
+      {
+        elem: 'submit',
+        tag: 'input',
+        attrs: {
+          type: 'submit',
+          value: 'Найти'
+        }
+      }
+    ];
+  })
+
+);

@@ -1,0 +1,14 @@
+block('banner')(
+
+  content()(function(){
+    return {
+      elem: 'link',
+      tag: 'a',
+      attrs: {
+        href: this.ctx.href
+      },
+      content: this.ctx.text
+    };
+  })
+
+);

@@ -2,6 +2,7 @@
   {block: 'global'},
   {
     block: 'page',
+    mods: {bundle: "listing-list"},
     title: 'Пирожки',
     styles: [
       {

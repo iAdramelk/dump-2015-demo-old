@@ -1,0 +1,33 @@
+block('preview-item').content()(function(){
+
+  function formatMoney(val) {
+    return (val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ') + ' руб.';
+  }
+
+  return {
+    elem: 'link',
+    tag: 'a',
+    attrs: {href: 'this.ctx.href'},
+    content: [
+      {
+        elem: 'image',
+        tag: 'img',
+        attrs: {src: '../' + this.ctx.image}
+      },
+      {
+        elem: 'meta',
+        content: [
+          {
+            elem: 'title',
+            content: this.ctx.title
+          },
+          {
+            elem: 'price',
+            content: formatMoney(this.ctx.price)
+          }
+        ]
+      }
+    ]
+  };
+
+});

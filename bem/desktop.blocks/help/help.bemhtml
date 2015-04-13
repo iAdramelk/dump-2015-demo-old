@@ -1,0 +1,17 @@
+block('help')(
+
+  content()(function(){
+    this.ctx.content.unshift({elem: 'title', content: this.ctx.title});
+    return this.ctx.content;
+  }),
+
+  elem('item').content()(function() {
+    return {
+      elem: 'link',
+      tag: 'a',
+      content: this.ctx.text,
+      attrs: {href: this.ctx.href}
+    };
+  })
+
+);
