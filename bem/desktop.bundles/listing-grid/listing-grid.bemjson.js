@@ -1,7 +1,8 @@
-([
+module.exports = [
   {block: 'global'},
   {
     block: 'page',
+    data: require('../../../data/listing'),
     'title': 'Пирожки',
     mods: {bundle: "listing-grid"},
     'styles': [
@@ -920,4 +921,4 @@
         ]
       }
     ]
-  }]);
+  }];
