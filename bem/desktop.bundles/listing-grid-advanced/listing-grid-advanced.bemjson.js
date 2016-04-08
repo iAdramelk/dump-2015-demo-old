@@ -257,28 +257,32 @@ module.exports = {
                     },
                     {
                       block: 'preview-item',
-                      content: {
-                        elem: 'link',
-                        tag: 'a',
-                        attrs: {'href': '#'},
-                        content: [
-                          {
-                            elem: 'image',
-                            tag: 'img',
-                            attrs: {'src': '../../tmp/placeholder-03.jpg'}
-                          },
-                          {
-                            elem: 'meta',
-                            content: [
-                              {
-                                elem: 'title',
-                                content: 'Платье People'
-                              },
-                              {elem: 'price', content: '1 999 руб.'}
-                            ]
-                          }
-                        ]
-                      }
+                      href: '#',
+                      image: '../../tmp/placeholder-03.jpg',
+                      title: 'Платье People',
+                      price: '1 999 руб.'
+                      // content: {
+                      //   elem: 'link',
+                      //   tag: 'a',
+                      //   attrs: {'href': '#'},
+                      //   content: [
+                      //     {
+                      //       elem: 'image',
+                      //       tag: 'img',
+                      //       attrs: {'src': '../../tmp/placeholder-03.jpg'}
+                      //     },
+                      //     {
+                      //       elem: 'meta',
+                      //       content: [
+                      //         {
+                      //           elem: 'title',
+                      //           content: 'Платье People'
+                      //         },
+                      //         {elem: 'price', content: '1 999 руб.'}
+                      //       ]
+                      //     }
+                      //   ]
+                      // }
                     },
                     {
                       block: 'preview-item',

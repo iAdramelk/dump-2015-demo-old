@@ -1,4 +1,7 @@
 block('list-item').content()(function(){
+  var data = this.data.goods[this.position - 1];
+
+  if (!data) return '';
 
   function formatMoney(val) {
     return (val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ') + ' руб.';
@@ -8,12 +11,12 @@ block('list-item').content()(function(){
     {
       tag: 'a',
       attrs: {
-        href: this.ctx.href
+        href: data.href
       },
       content: {
         elem: 'image',
         tag: 'img',
-        attrs: {src: '../' + this.ctx.image}
+        attrs: {src: '../' + data.image}
       }
     },
     {
@@ -21,21 +24,21 @@ block('list-item').content()(function(){
       content: [
         {
           elem: 'price',
-          content: formatMoney(this.ctx.price)
+          content: formatMoney(data.price)
         },
         {
           elem: 'title',
           content: {
             tag: 'a',
             attrs: {
-              'href': this.ctx.href
+              'href': data.href
             },
-            content: this.ctx.title
+            content: data.title
           }
         },
         {
           elem: 'description',
-          content: this.ctx.description
+          content: data.description
         }
       ]
     }
