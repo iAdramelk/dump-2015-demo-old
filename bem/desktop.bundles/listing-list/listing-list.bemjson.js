@@ -1,7 +1,6 @@
-([
-  {block: 'global'},
-  {
+module.exports = {
     block: 'page',
+    data: require('../../../data/listing'),
     mods: {bundle: "listing-list"},
     title: 'Пирожки',
     styles: [
@@ -1010,5 +1009,4 @@
         ]
       }
     ]
-  }
-]);
+  };

@@ -1,7 +1,10 @@
 block('preview-item').content()(function(){
+  var data = this.data.goods[this.position - 1];
+
+  if (!data) return '';
 
   function formatMoney(val) {
-    return (val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ') + ' руб.';
+    return parseInt(val || 0).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$& ') + ' руб.';
   }
 
   return {
@@ -12,18 +15,18 @@ block('preview-item').content()(function(){
       {
         elem: 'image',
         tag: 'img',
-        attrs: {src: '../' + this.ctx.image}
+        attrs: {src: '../' + data.image}
       },
       {
         elem: 'meta',
         content: [
           {
             elem: 'title',
-            content: this.ctx.title
+            content: data.title
           },
           {
             elem: 'price',
-            content: formatMoney(this.ctx.price)
+            content: formatMoney(data .price)
           }
         ]
       }

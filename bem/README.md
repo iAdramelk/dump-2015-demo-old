@@ -6,4 +6,4 @@
 
 ## Development
 
-    ./node_modules/.bin/enb server
+    npm start
