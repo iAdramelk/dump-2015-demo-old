@@ -1,7 +1,10 @@
 block('help')(
 
   content()(function(){
-    this.ctx.content.unshift({elem: 'title', content: this.ctx.title});
+    var ctx = this.ctx;
+
+    ctx.content || (ctx.content = []);
+    ctx.content.unshift({elem: 'title', content: this.ctx.title});
     return this.ctx.content;
   }),
 
