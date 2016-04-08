@@ -1,11 +1,9 @@
-module.exports = [
-  {block: 'global'},
-  {
+module.exports = {
     block: 'page',
     data: require('../../../data/listing'),
-    'title': 'Пирожки',
-    mods: {bundle: "listing-grid"},
-    'styles': [
+    title: 'Пирожки',
+    mods: {bundle: 'listing-grid'},
+    styles: [
       {
         elem: 'css',
         'url': 'listing-grid.css'
@@ -921,4 +919,4 @@ module.exports = [
         ]
       }
     ]
-  }];
+  };

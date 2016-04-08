@@ -1,6 +1,4 @@
-module.exports = [
-  {block: 'global'},
-  {
+module.exports = {
     block: 'page',
     data: require('../../../data/listing'),
     mods: {bundle: "listing-list"},
@@ -1011,5 +1009,4 @@ module.exports = [
         ]
       }
     ]
-  }
-];
+  };

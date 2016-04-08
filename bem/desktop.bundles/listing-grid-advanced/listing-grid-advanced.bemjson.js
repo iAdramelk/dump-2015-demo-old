@@ -1,6 +1,4 @@
-module.exports = [
-  {block: 'global'},
-  {
+module.exports = {
     block: 'page',
     title: 'Пирожки',
     data: require('../../../data/listing'),
@@ -619,4 +617,4 @@ module.exports = [
         ]
       }
     ]
-  }];
+  };
