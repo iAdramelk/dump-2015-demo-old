@@ -9,6 +9,7 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "v2.5.1"
+    "bem-core": "v2.9.1",
+    "normalize-css": "normalize.css#^4.0.0"
   }
 }
