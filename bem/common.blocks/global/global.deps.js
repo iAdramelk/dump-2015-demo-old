@@ -1,6 +1,7 @@
 ({
     mustDeps: ['i-bem'],
     shouldDeps: [
-        { block: 'page' }
+        'page',
+        'normalize'
     ]
 })
